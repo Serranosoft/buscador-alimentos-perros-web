@@ -2,7 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
 }
 
 a {
@@ -16,6 +19,6 @@ a {
 }
 
 button, .button {
-  display: inline;
+  display: block;
   background-color: #1983ff;
 }

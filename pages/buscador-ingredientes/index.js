@@ -1,8 +1,12 @@
 import Head from "next/head";
+import Link from "next/link";
+import { useState } from "react";
 import { removeAccents } from "../../utils/strings";
 import { fetchExcel } from "../api/excel";
 
 export default function buscadorIngredientes({ ingredients }) {
+
+    const [matches, setMatches] = useState([]);
 
     return (
         <>
@@ -14,7 +18,13 @@ export default function buscadorIngredientes({ ingredients }) {
 
             <div>
                 <input type="text" className="search-input" placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
-                <div className="suggestions"></div>
+                <div className="suggestions">
+                    {matches.map(el => {
+                        return (
+                            <Link href="/aaa"><a dangerouslySetInnerHTML={{__html: el}} /></Link>
+                        )
+                    })}
+                </div>
             </div>
         </>
     )
@@ -31,16 +41,17 @@ export default function buscadorIngredientes({ ingredients }) {
 
     function displayMatches(letters) {
         const matchArray = findMatches(letters);
-        const suggestions = matchArray.map(ingredient => {
-
-            const regex = new RegExp(removeAccents(letters), 'gi');
-            const ingrMatched = removeAccents(ingredient.name)
-                .replace(regex, `<span style="background-color: yellow">${letters}</span>`)
-
-            return `<li><span class="name">${ingrMatched}</span></li>`;
+        let i = 0;
+        let matches = [];
+        matchArray.map(ingredient => {
+            if (i < 5) {
+                const regex = new RegExp(removeAccents(letters), 'gi');
+                const ingrMatched = removeAccents(ingredient.name).replace(regex, `<span style="background-color: yellow">${letters}</span>`)
+                i++;
+                matches.push(`<p>${ingrMatched}</p>`)
+            }
         }).join('');
-
-        document.querySelector(".suggestions").innerHTML = suggestions;
+        setMatches(matches)
     }
 
 }

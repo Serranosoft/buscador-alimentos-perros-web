@@ -12,12 +12,12 @@ export async function fetchExcel() {
     const sheets = google.sheets({ version: "v4", auth: jwt });
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Hoja 1",
+        range: "Hoja 2",
     });
     const cols = response.data.values;
     cols.shift();
     cols.forEach(ingredient => {
-        result.push({name: ingredient[0], descr: ingredient[1]})
+        result.push({name: ingredient[0], descr: ingredient[1] != undefined ? ingredient[1] : null})
     })
     return result;
 }
