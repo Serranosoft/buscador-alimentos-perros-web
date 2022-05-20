@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { removeAccents } from '../utils/strings';
-import { fetchExcel } from './api/excel';
+import styles from '../styles/modules/Home.module.css'
+import Link from "next/link";
 
-export default function Home({ ingredients }) {
+export default function Home() {
 
     return (
         <>
@@ -13,44 +12,9 @@ export default function Home({ ingredients }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <div>
-                    <input type="text" className="search" placeholder="manzana, pera..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
-                    <div className="suggestions"></div>
-                </div>
-            </main>
+            <Link href="/buscador-ingredientes">
+                <a>Buscador de ingredientes</a>
+            </Link>
         </>
-    )
-
-    function findMatches(letters) {
-        return ingredients.filter(ingredient => {
-            const regex = new RegExp(removeAccents(letters), 'gi');
-            if (letters != "") {
-                return removeAccents(ingredient.name).match(regex);
-            }
-            return "";
-        })
-    }
-
-    function displayMatches(letters) {
-        const matchArray = findMatches(letters);
-        const suggestions = matchArray.map(ingredient => {
-
-            const regex = new RegExp(removeAccents(letters), 'gi');
-            const ingrMatched = removeAccents(ingredient.name)
-            .replace(regex, `<span style="background-color: yellow">${letters}</span>`)
-
-            return `<li><span class="name">${ingrMatched}</span></li>`;
-        }).join('');
-
-        document.querySelector(".suggestions").innerHTML = suggestions;
-    }
-}
-
-
-export async function getServerSideProps() {
-    let ingredients = await fetchExcel();
-    return {
-        props: {ingredients}
-    }
+    )    
 }
