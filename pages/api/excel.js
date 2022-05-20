@@ -1,5 +1,8 @@
 import { google } from "googleapis";
 import { removeAccents } from "../../utils/strings";
+
+const IngredientesHoja = "Hoja 2"
+
 export async function fetchExcel() {
     let result = [];
     const target = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
@@ -12,12 +15,12 @@ export async function fetchExcel() {
     const sheets = google.sheets({ version: "v4", auth: jwt });
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Hoja 2",
+        range: IngredientesHoja,
     });
     const cols = response.data.values;
     cols.shift();
     cols.forEach(ingredient => {
-        result.push({name: ingredient[0], descr: ingredient[1] != undefined ? ingredient[1] : null})
+        result.push({id: ingredient[0], name: ingredient[1], descr: ingredient[2] != undefined ? ingredient[2] : null})
     })
     return result;
 }
@@ -34,12 +37,12 @@ export async function fetchAllIngredientNames() {
     const sheets = google.sheets({ version: "v4", auth: jwt });
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Hoja 2",
+        range: IngredientesHoja,
     });
     const data = response.data.values;
     data.shift();
     data.forEach(ingredient => {
-        result.push(ingredient[0]);
+        result.push(ingredient[1]);
     })
     
     return result;
@@ -58,16 +61,16 @@ export async function fetchIngredientByName(name) {
     const sheets = google.sheets({ version: "v4", auth: jwt });
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SPREADSHEET_ID,
-        range: "Hoja 2",
+        range: IngredientesHoja,
     });
     const data = response.data.values;
     data.shift();
-    console.log(name);
+
     data.forEach(ingredient => {
-        if (removeAccents(ingredient[0]).toLowerCase() == name) {
+        if (removeAccents(ingredient[1]).toLowerCase() == name) {
             result = {
-                name: ingredient[0], 
-                descr: ingredient[1]
+                name: ingredient[1], 
+                descr: ingredient[2]
             }
         }
     })

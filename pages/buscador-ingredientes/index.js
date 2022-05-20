@@ -21,7 +21,7 @@ export default function buscadorIngredientes({ ingredients }) {
                 <div className="suggestions">
                     {matches.map(el => {
                         return (
-                            <Link href={`buscador-ingredientes/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
+                            <Link key={el.id} href={`buscador-ingredientes/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
                         )
                     })}
                 </div>
@@ -48,7 +48,7 @@ export default function buscadorIngredientes({ ingredients }) {
                 const regex = new RegExp(removeAccents(letters), 'gi');
                 const ingrMatched = removeAccents(ingredient.name).replace(regex, `<span style="background-color: yellow">${letters}</span>`)
                 i++;
-                matches.push({html: `<p>${ingrMatched}</p>`, url:removeAccents(formatToUrl(ingredient.name)), name: ingredient.name})
+                matches.push({id: ingredient.id, html: `<p>${ingrMatched}</p>`, url: removeAccents(formatToUrl(ingredient.name)), name: ingredient.name})
             }
         }).join('');
         setMatches(matches)
