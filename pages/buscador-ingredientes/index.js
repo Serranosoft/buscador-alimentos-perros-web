@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-import { removeAccents } from "../../utils/strings";
+import { formatToUrl, removeAccents } from "../../utils/strings";
 import { fetchExcel } from "../api/excel";
 
 export default function buscadorIngredientes({ ingredients }) {
@@ -21,7 +21,7 @@ export default function buscadorIngredientes({ ingredients }) {
                 <div className="suggestions">
                     {matches.map(el => {
                         return (
-                            <Link href="/aaa"><a dangerouslySetInnerHTML={{__html: el}} /></Link>
+                            <Link href={`buscador-ingredientes/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
                         )
                     })}
                 </div>
@@ -48,7 +48,7 @@ export default function buscadorIngredientes({ ingredients }) {
                 const regex = new RegExp(removeAccents(letters), 'gi');
                 const ingrMatched = removeAccents(ingredient.name).replace(regex, `<span style="background-color: yellow">${letters}</span>`)
                 i++;
-                matches.push(`<p>${ingrMatched}</p>`)
+                matches.push({html: `<p>${ingrMatched}</p>`, url:removeAccents(formatToUrl(ingredient.name)), name: ingredient.name})
             }
         }).join('');
         setMatches(matches)
