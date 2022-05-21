@@ -2,6 +2,7 @@ $color5: #B8B3BE;
 $color1: #5DFDCB;
 $color2: #90D7FF;
 $color3: #C9F9FF;
+$color6: #ffccd0;
 
 .container {
     width: 100%;
@@ -20,7 +21,7 @@ $color3: #C9F9FF;
         left: 0px;
         background-image: url("/img/n005.jpg");
         background-size: cover;
-        opacity: 0.08;
+        opacity: 0.09;
     }
     & > * {
         position: relative;
@@ -34,6 +35,16 @@ $color3: #C9F9FF;
         h1 {
             font-weight: bold;
             font-size: 2.5rem;
+            .highlightSuccess {
+                display: inline-block;
+                background-color: $color1;
+                transform: skew(-15deg);
+            }
+            .highlightError {
+                display: inline-block;
+                background-color: $color6;
+                transform: skew(8deg);
+            }
         }
         .searchInput {
             width: 85%;
@@ -41,7 +52,7 @@ $color3: #C9F9FF;
             outline: 0;
             border: 2px solid $color1;
             border-radius: 0.2rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             background-color: white;
             color: black;
             text-align: center;

@@ -3,8 +3,9 @@ $header-muted: gray;
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $header-background;
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 3rem;
 
     .menuContainer {
         display: flex;
@@ -13,7 +14,7 @@ $header-muted: gray;
 
     .separator {
         width: 1px;
-        height: 85%;
+        height: 30px;
         margin: auto 0;
         background-color: black;
     }
@@ -21,6 +22,17 @@ $header-muted: gray;
     .menuLogo {
         display: flex;
         gap: 2rem;
+        svg {
+            height: 3rem;
+        }
+        & > a:first-child div {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        a {
+            align-self: center;
+        }
     }
 
     .muted {

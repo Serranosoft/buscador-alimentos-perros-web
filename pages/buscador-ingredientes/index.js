@@ -18,7 +18,7 @@ export default function BuscadorIngredientes({ ingredients }) {
             </Head>
 
             <div className={styles.inputContainer}>
-                <h1>¿Qué alimentos son saludables o perjudiciales en un perro para comer?</h1>
+                <h1>¿Qué alimentos son {/* <span className={styles.highlightSuccess}> */}saludables{/* </span> */} o {/* <span className={styles.highlightError}> */}perjudiciales{/* </span> */} para mi perro?</h1>
                 <input type="text" className={styles.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
                 <div className={styles.suggestions}>
                     {matches.map(el => {

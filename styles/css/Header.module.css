@@ -5,8 +5,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #C9F9FF;
-  padding: 1.5rem 3rem;
+  padding: 1.2rem 3rem;
 }
 
 .header .menuContainer {
@@ -18,9 +21,12 @@
 
 .header .separator {
   width: 1px;
-  height: 85%;
+  height: 30px;
   margin: auto 0;
   background-color: black;
+  -ms-flex-item-align: unset;
+      -ms-grid-row-align: unset;
+      align-self: unset;
 }
 
 .header .menuLogo {
@@ -28,6 +34,26 @@
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
+}
+
+.header .menuLogo svg {
+  height: 3rem;
+}
+
+.header .menuLogo > a:first-child div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header .menuLogo a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .header .muted {
