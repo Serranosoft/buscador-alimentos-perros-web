@@ -1,4 +1,4 @@
-import { fetchAllIngredientNames, fetchIngredientByName } from "../api/excel"
+import { /* fetchAllIngredientNames, */ fetchIngredientByName } from "../api/excel"
 
 export default function Ingrediente(props) {
 
@@ -12,13 +12,14 @@ export default function Ingrediente(props) {
 }
 
 export async function getStaticPaths() {
-    let result = await fetchAllIngredientNames();
+    /* let result = await fetchAllIngredientNames();
     let paths = result.map(el => {
         return {
             params: {name: el}
         }
     })
-    console.log(paths);
+    console.log(paths); */
+    let paths = [{params: {name: "Manzana"}}];
     return {
         paths,
         fallback: true
