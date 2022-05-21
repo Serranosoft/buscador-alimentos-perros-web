@@ -1,13 +1,15 @@
 import { /* fetchAllIngredientNames, */ fetchIngredientByName } from "../api/excel"
+import styles from '../../styles/css/Ingredient.module.css'
 
 export default function Ingrediente(props) {
 
-    console.log(props);
     return (
-        <>
-            <p>{props.name}</p>
-            <p>{props.descr}</p>
-        </>
+        <section className={styles.container}>
+            <h1>¿Un perro puede comer {props.name}?</h1>
+            <div className={styles.descrContainer}>
+                <p>{props.descr}</p>
+            </div>
+        </section>
     )
 }
 
@@ -17,8 +19,7 @@ export async function getStaticPaths() {
         return {
             params: {name: el}
         }
-    })
-    console.log(paths); */
+    }) */
     let paths = [{params: {name: "Manzana"}}];
     return {
         paths,
@@ -29,6 +30,5 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const { params } = context
     let result = await fetchIngredientByName(params.name);
-    console.log(result);
     return { props: result }
 }

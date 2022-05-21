@@ -1,0 +1,89 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url("/img/n005.jpg");
+  background-size: cover;
+  opacity: 0.08;
+}
+
+.container > * {
+  position: relative;
+}
+
+.container .inputContainer {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.container .inputContainer h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.container .inputContainer .searchInput {
+  width: 85%;
+  padding: 0.7rem .5rem;
+  outline: 0;
+  border: 2px solid #5DFDCB;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.container .inputContainer .suggestions {
+  text-transform: lowercase;
+  border: 1px solid #adadad;
+  -webkit-box-shadow: 3px 3px 0 #adadad;
+          box-shadow: 3px 3px 0 #adadad;
+  width: 85%;
+}
+
+.container .inputContainer .suggestions > a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+}
+
+.container .inputContainer .suggestions > a:hover {
+  background-color: #C9F9FF;
+}

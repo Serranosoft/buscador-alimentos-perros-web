@@ -10,16 +10,16 @@ export default function Header() {
 
     function action() {
         let messages = [
-            "Uvas?",
-            "Plátanos?",
-            "Papeles?",
-            "Cartón?",
-            "Manzanas?",
-            "Peras?", 
-            "Carne?",
-            "Huesos de pollo?",
-            "Huevos?",
-            "Jamón serrano?"
+            "uvas?",
+            "plátanos?",
+            "papeles?",
+            "cartón?",
+            "manzanas?",
+            "peras?", 
+            "carne?",
+            "huesos de pollo?",
+            "huevos?",
+            "jamón serrano?"
         ]
 
         document.getElementById("ingredient-statement").textContent = messages[Math.floor(Math.random() * (10 - 0) + 0)];

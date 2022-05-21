@@ -1,5 +1,5 @@
 import { google } from "googleapis";
-import { removeAccents } from "../../utils/strings";
+import { removeAccents, addSpaces } from "../../utils/strings";
 
 const IngredientesHoja = "Hoja 2"
 
@@ -67,7 +67,7 @@ export async function fetchIngredientByName(name) {
     data.shift();
 
     data.forEach(ingredient => {
-        if (removeAccents(ingredient[1]).toLowerCase() == name) {
+        if (removeAccents(ingredient[1]).toLowerCase() == addSpaces(name)) {
             result = {
                 name: ingredient[1], 
                 descr: ingredient[2] != undefined ? ingredient[2] : "Ha ocurrido un error en la descripción. Lo sentimos :("
