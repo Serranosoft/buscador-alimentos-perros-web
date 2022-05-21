@@ -2,7 +2,7 @@ import { fetchAllIngredientNames, fetchIngredientByName } from "../api/excel"
 
 export default function Ingrediente(props) {
 
-
+    console.log(props);
     return (
         <>
             <p>{props.name}</p>
@@ -28,6 +28,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const { params } = context
     let result = await fetchIngredientByName(params.name);
-
+    console.log(result);
     return { props: result }
 }

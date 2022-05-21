@@ -4,7 +4,7 @@ import { useState } from "react";
 import { formatToUrl, removeAccents } from "../../utils/strings";
 import { fetchExcel } from "../api/excel";
 
-export default function buscadorIngredientes({ ingredients }) {
+export default function BuscadorIngredientes({ ingredients }) {
 
     const [matches, setMatches] = useState([]);
 

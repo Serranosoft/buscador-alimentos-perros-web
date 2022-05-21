@@ -70,7 +70,7 @@ export async function fetchIngredientByName(name) {
         if (removeAccents(ingredient[1]).toLowerCase() == name) {
             result = {
                 name: ingredient[1], 
-                descr: ingredient[2]
+                descr: ingredient[2] != undefined ? ingredient[2] : "Ha ocurrido un error en la descripción. Lo sentimos :("
             }
         }
     })

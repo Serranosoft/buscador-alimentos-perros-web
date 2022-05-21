@@ -2,6 +2,36 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: red;
-  border: 2px solid blue;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #C9F9FF;
+  padding: 1.5rem 3rem;
+}
+
+.header .menuContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.header .separator {
+  width: 1px;
+  height: 85%;
+  margin: auto 0;
+  background-color: black;
+}
+
+.header .menuLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.header .muted {
+  font-size: 0.7rem;
+  color: gray;
+  border-radius: 100%;
 }

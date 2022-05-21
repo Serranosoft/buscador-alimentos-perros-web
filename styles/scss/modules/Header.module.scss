@@ -1,5 +1,31 @@
+$header-background: #C9F9FF;
+$header-muted: gray;
 .header {
     display: flex;
-    background-color: red;
-    border: 2px solid blue;
+    justify-content: space-between;
+    background-color: $header-background;
+    padding: 1.5rem 3rem;
+
+    .menuContainer {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .separator {
+        width: 1px;
+        height: 85%;
+        margin: auto 0;
+        background-color: black;
+    }
+
+    .menuLogo {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .muted {
+        font-size: 0.7rem;
+        color: $header-muted;
+        border-radius: 100%;
+    }
 }
