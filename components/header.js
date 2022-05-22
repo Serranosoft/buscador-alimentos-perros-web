@@ -39,7 +39,7 @@ export default function Header() {
                     </a>
                 </Link>
                 <div className={styles.separator}></div>
-                <Link href="/buscador-ingredientes">
+                <Link href="/buscador/alimento">
                     <a>¿Puede comer un perro <span id="ingredient-statement" className={styles.ingredientStatement}></span> 👈 <span className={styles.muted}>Prueba nuestra herramienta</span></a>
                 </Link>
             </div>

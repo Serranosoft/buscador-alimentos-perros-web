@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from '../../styles/css/buscadorIngrediente.module.css'
+import styles from '../../../styles/css/buscadorIngrediente.module.css'
 import { useState } from "react";
-import { formatToUrl, removeAccents } from "../../utils/strings";
-import { fetchExcel } from "../api/excel";
+import { formatToUrl, removeAccents } from "../../../utils/strings";
+import { fetchExcel } from "../../api/excel";
 
-export default function BuscadorIngredientes({ ingredients }) {
+export default function BuscadorAlimentos({ ingredients }) {
 
     const [matches, setMatches] = useState([]);
 
@@ -23,7 +23,7 @@ export default function BuscadorIngredientes({ ingredients }) {
                 <div className={styles.suggestions}>
                     {matches.map(el => {
                         return (
-                            <Link key={el.id} href={`buscador-ingredientes/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
+                            <Link key={el.id} href={`/buscador/alimento/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
                         )
                     })}
                 </div>

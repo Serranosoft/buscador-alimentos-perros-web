@@ -1,5 +1,5 @@
-import { fetchIngredientByName } from "../api/excel"
-import styles from '../../styles/css/Ingredient.module.css'
+import { fetchIngredientByName } from "../../api/excel"
+import styles from '../../../styles/css/Ingredient.module.css'
 import { useEffect } from 'react';
 
 export default function Ingrediente(props) {

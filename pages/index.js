@@ -16,7 +16,7 @@ export default function Home() {
                 <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
                 <p className={styles.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
                 <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
-                <Link href="/buscador-ingredientes">
+                <Link href="/buscador/alimento">
                     <a>
                         <button className="CTA"> Prueba BuscaDog Gratis
                             <div className="icon">
