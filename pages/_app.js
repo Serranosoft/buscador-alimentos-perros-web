@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import '../styles/css/common.css';
-import styles from "../styles/css/app.css"
+import styles from "../styles/css/app.css" // No quitar, por alguna razon funciona.
+
 function MyApp({ Component, pageProps }) {
     return (
     <>

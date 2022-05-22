@@ -1,3 +1,27 @@
-a.jaja {
-    color: red;
+$color1: #5DFDCB;
+$color1-2: #bbffe9;
+$color2: #90D7FF;
+$color3: #C9F9FF;
+$color4: #BFD0E0;
+$color5: #B8B3BE;
+$color6: #ffccd0;
+
+.heroSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    .heroTitle {
+        font-size: 2.6rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .muted {
+        font-size: 1.25rem;
+        padding: 0 2rem;
+        color: gray;
+        text-align: center;
+    }
+
 }

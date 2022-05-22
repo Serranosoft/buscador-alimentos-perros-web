@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/css/Home.module.css'
 import Link from "next/link";
+import CTA from '../components/CTA';
 
 export default function Home() {
 
@@ -12,8 +13,19 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <section className={styles.heroSection}>
-
+                <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
+                <p className={styles.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
+                <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
+                <Link href="/buscador-ingredientes">
+                    <a>
+                        <button class="CTA"> Prueba BuscaDog Gratis
+                            <div class="icon">
+                                <CTA />
+                            </div>
+                        </button>
+                    </a>
+                </Link>
             </section>
         </>
-    )    
+    )
 }
