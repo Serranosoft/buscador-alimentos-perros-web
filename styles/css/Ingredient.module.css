@@ -11,7 +11,6 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  position: relative;
   height: 100vh;
 }
 
@@ -40,7 +39,7 @@
 }
 
 .container .descrContainer {
-  width: 45%;
+  width: 100%;
   padding: 0.3rem 2rem;
   border-radius: 30px;
   font-size: 0.95rem;
@@ -50,4 +49,16 @@
           box-shadow: 0 0 10px gray;
   background-color: white;
   text-align: justify;
+}
+
+.container .descrContainer.red {
+  background-color: red;
+}
+
+.container .descrContainer.green {
+  background-color: green;
+}
+
+.container .descrContainer span {
+  white-space: pre-wrap;
 }

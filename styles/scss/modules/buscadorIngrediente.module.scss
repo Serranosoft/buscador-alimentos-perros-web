@@ -10,7 +10,6 @@ $color6: #ffccd0;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    position: relative;
     height: 100vh;
     &::before {
         content: "";
@@ -27,7 +26,7 @@ $color6: #ffccd0;
         position: relative;
     }
     .inputContainer {
-        width: 35%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -73,6 +72,14 @@ $color6: #ffccd0;
                     background-color: $color3;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .inputContainer {
+        h1 {
+            font-size: 1.7rem;
         }
     }
 }

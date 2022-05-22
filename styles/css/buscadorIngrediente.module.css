@@ -11,7 +11,6 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  position: relative;
   height: 100vh;
 }
 
@@ -32,7 +31,7 @@
 }
 
 .container .inputContainer {
-  width: 35%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,4 +99,10 @@
 
 .container .inputContainer .suggestions > a:hover {
   background-color: #C9F9FF;
+}
+
+@media (max-width: 768px) {
+  .inputContainer h1 {
+    font-size: 1.7rem;
+  }
 }

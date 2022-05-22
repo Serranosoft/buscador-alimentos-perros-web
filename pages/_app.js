@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import '../styles/css/common.css';
-
+import styles from "../styles/css/app.css"
 function MyApp({ Component, pageProps }) {
     return (
     <>
@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps }) {
             <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;600;700;800;900&display=swap" rel="stylesheet" /> 
         </Head>
         <Header />
-        <Component {...pageProps} />
+        <main className="mainContainer">
+            <Component {...pageProps} />
+        </main>
     </>)
 }
 
