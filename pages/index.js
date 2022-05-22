@@ -18,8 +18,8 @@ export default function Home() {
                 <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
                 <Link href="/buscador-ingredientes">
                     <a>
-                        <button class="CTA"> Prueba BuscaDog Gratis
-                            <div class="icon">
+                        <button className="CTA"> Prueba BuscaDog Gratis
+                            <div className="icon">
                                 <CTA />
                             </div>
                         </button>
