@@ -13,7 +13,7 @@ export default function AllIngredients(props) {
             <div className={styles.ingredientWrapper}>
                 {props.ingredient.map(ingr => {
                     return (
-                        <Link href={`/buscador/alimento/${formatToUrl(removeAccents(ingr))}`}>
+                        <Link key={formatToUrl(removeAccents(ingr))} href={`/buscador/alimento/${formatToUrl(removeAccents(ingr))}`}>
                             <a>
                                 {ingr}
                             </a>
