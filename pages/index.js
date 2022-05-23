@@ -13,7 +13,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]" />
                 <meta property="og:url" content="https://buscadog.net/" />
-                {/* <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" /> */}
+                <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test1.jpg" />
             </Head>
             <section className={styles.heroSection}>
                 <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
