@@ -3,9 +3,9 @@ export function removeAccents(str) {
 }
 
 export function formatToUrl(str) {
-    return str.replaceAll(' ', "+").toLowerCase();
+    return str.replace(new RegExp("\\ ","g"), "+").toLowerCase();
 }
 
 export function addSpaces(str) {
-    return str.replaceAll('+', " ").toLowerCase();
+    return str.replace(new RegExp("\\+","g"), " ").toLowerCase();
 }
