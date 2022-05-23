@@ -43,11 +43,11 @@ export default function Header() {
                     <a>¿Puede comer un perro <span id="ingredient-statement" className={styles.ingredientStatement}></span> 👈 <span className={styles.muted}>Prueba nuestra herramienta</span></a>
                 </Link>
             </div>
-            <div className={styles.menuContainer}>
+            {/* <div className={styles.menuContainer}>
                 <Link href="/enlace1"><a>Enlace de menú 1</a></Link>
                 <Link href="/enlace2"><a>Enlace de menú 2</a></Link>
                 <Link href="/enlace3"><a>Enlace de menú 3</a></Link>
-            </div>
+            </div> */}
         </header>
     )
 }
