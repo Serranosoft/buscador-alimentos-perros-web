@@ -16,7 +16,12 @@ export default function Ingrediente(props) {
                 <meta name="description" content={`¿Un perro puede comer ${props.name}? Respuestas rápidas en Buscadog`} />
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content={`¿Un perro puede comer ${props.name}? Respuestas rápidas en Buscadog`} />
-                <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test1.jpg" />
+                <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
+                <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                <meta property="og:type" content="website"></meta>
+                <meta name="twitter:card" content="summary_large_image"></meta>
+                <meta name="twitter:description" content={`¿Un perro puede comer ${props.name}? Respuestas rápidas en Buscadog`}></meta>
+                <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
             <section className={styles.container}>
                 <h1>¿Un perro puede comer <span className={styles.headingVariable}>{props.name}</span>?</h1>

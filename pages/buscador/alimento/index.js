@@ -30,7 +30,12 @@ export default function BuscadorAlimentos({ ingredients }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:title" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]" />
                 <meta property="og:url" content="https://buscadog.net/buscador/alimento" />
-                <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test1.jpg" />
+                <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
+                <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                <meta property="og:type" content="website"></meta>
+                <meta name="twitter:card" content="summary_large_image"></meta>
+                <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
+                <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
 
             <div className={styles.inputContainer}>
