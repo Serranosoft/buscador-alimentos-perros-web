@@ -1,14 +1,27 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from '../../../styles/css/buscadorIngrediente.module.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { formatToUrl, removeAccents } from "../../../utils/strings";
 import { fetchExcel } from "../../api/excel";
+import { useRouter } from "next/router";
 
 export default function BuscadorAlimentos({ ingredients }) {
 
     const [matches, setMatches] = useState([]);
-
+    const router = useRouter();
+    useEffect(() => {
+        if (document.querySelectorAll("#ingredient-suggestions a").length > 0) {
+            if (document.querySelector("#ingredient-suggestions > a:first-of-type").href !== null) {
+                window.addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") {
+                        router.push(document.querySelector("#ingredient-suggestions > a:first-of-type").href);
+                    }
+                })
+            }
+        }
+    }, [matches])
+    
     return (
         <section className={styles.container}>
             <Head>
@@ -24,7 +37,7 @@ export default function BuscadorAlimentos({ ingredients }) {
                 <h1>¿Qué alimentos son saludables o perjudiciales para mi perro?</h1>
                 <span>Descúbre como afecta los distintos productos orgánicos e inorganicos en la salud de tu mascota favorita</span>
                 <input type="text" className={styles.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
-                <div className={styles.suggestions}>
+                <div id="ingredient-suggestions" className={styles.suggestions}>
                     {matches.map(el => {
                         return (
                             <Link key={el.id} href={`/buscador/alimento/${el.url}`}><a dangerouslySetInnerHTML={{__html: el.html}} /></Link>
