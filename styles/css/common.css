@@ -70,7 +70,7 @@ button,
 }
 
 .CTA > .icon svg {
-  width: 2.5rem;
+  width: 3rem;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;

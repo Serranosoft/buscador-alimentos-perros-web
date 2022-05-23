@@ -10,7 +10,6 @@ $color6: #ffccd0;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    height: 100vh;
     &::before {
         content: "";
         position: absolute;
@@ -24,6 +23,7 @@ $color6: #ffccd0;
     }
     & > * {
         position: relative;
+        word-spacing: -0.45px;
     }
     .inputContainer {
         width: 100%;
@@ -33,17 +33,14 @@ $color6: #ffccd0;
         text-align: center;
         h1 {
             font-weight: bold;
-            font-size: 2.5rem;
-            .highlightSuccess {
-                display: inline-block;
-                background-color: $color1;
-                transform: skew(-15deg);
-            }
-            .highlightError {
-                display: inline-block;
-                background-color: $color6;
-                transform: skew(8deg);
-            }
+            letter-spacing: -1px;
+            font-size: 2.7rem;
+            margin: 2rem 0 1.4rem 0;
+        }
+        span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
         }
         .searchInput {
             width: 85%;
@@ -70,6 +67,67 @@ $color6: #ffccd0;
                 background-color: white;
                 &:hover {
                     background-color: $color3;
+                }
+            }
+        }
+    }
+    .infoContainer {
+        margin: 7rem 0;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        p {
+            margin: 1.2rem 0;
+            line-height: 1.8rem;
+        }
+        .howTo {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            span {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            ol {
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+                counter-reset: item;
+                li {
+                    margin: 1rem 0;
+                    counter-increment:item;
+                    &:before {
+                        margin-right: 0.5rem;
+                        margin-top: 0.5rem;
+                        content: counter(item);
+                        background:#5DFDCB;;
+                        border-radius: 100%;
+                        color:black;
+                        width: 2rem;
+                        text-align: center;
+                        display: inline-block;
+                        font-size: 1.2rem;
+                        font-weight:700
+                    }
+                }
+            }
+        }
+        .content {
+            ul {
+                margin: 0;
+                padding: 1.5rem;
+                list-style: none;
+                background-color: white;
+                box-shadow: 0 0 10px lightgray;
+                li {
+                    &:before{
+                        content: "»";
+                        font-size: 2rem;
+                        color: #90D7FF;
+                        margin: 10rem 1rem 0 1rem;
+                    }
                 }
             }
         }
