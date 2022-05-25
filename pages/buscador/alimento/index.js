@@ -63,16 +63,16 @@ export default function BuscadorAlimentos({ ingredients }) {
                 <div className={styles.content}>
                     <h2>¿Qué comida puede comer un perro?</h2>
                     <p>La mejor comida para nuestra mascota favorita consta de dos tipos: Dieta Barf compuesta por alimentos humanos crudos (Carnes, pescados, fruta...) y el tradicional pienso canino ya procesado y preparado especialmente para ellos</p>
-                    <p>¿Se te ha caído algo al suelo y tu amigo perruno se lo ha tragado?</p>
+                    <p>¿Se te ha caído algo al suelo, tu amigo perruno se lo ha tragado y no sabes si es malo?</p>
                     <ul>
                         <li>¿Piel de una cebolla? ✔️</li>
                         <li>¿Algún liquido como leche de vaca, refrescos azucarados o alcohol? ❌</li>
                         <li>¿Carne cruda? ✔️</li>
                     </ul>
+                    <p>BuscaDog ha creado un buscador con resultados instantáneos para cada alimento con el objetivo de proporcionarte información y respuestas rápidas a tus dudas.</p>
                     <p>Nuestros perros son nuestra mejor compañía, el mejor amigo y compañero que podemos tener cerca de nosotros.</p>
                     <p>Es inevitable crear un vinculo personal y muy bonito con ellos, compartimos experiencias, momentos muy bonitos y al ser responsables de ellos, tenemos que cuidarlos.</p>
                     <p>Por ello es muy importante mantener a nuestros compañeros sanos y bien alimentados.</p>
-                    <p>BuscaDog ha creado un buscador con resultados instantáneos para cada alimento con el objetivo de proporcionarte información y respuestas rápidas a tus dudas.</p>
                     <p>Guardate esta herramienta en marcadores y ten acceso siempre a esta información con todos los alimentos aptos para tu perro al instante</p>
                 </div>
             </div>

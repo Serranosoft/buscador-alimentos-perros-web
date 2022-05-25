@@ -18,6 +18,39 @@ a {
           box-sizing: border-box;
 }
 
+.mainContainer {
+  position: relative;
+  padding: 0 28%;
+}
+
+@media (max-width: 1280px) {
+  .mainContainer {
+    padding: 0 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainContainer {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 0 5%;
+  }
+}
+
+.background-error {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 131, 109, 0.15)), to(rgba(207, 0, 0, 0.5))), url("/img/n005.jpg");
+  background: linear-gradient(rgba(255, 131, 109, 0.15), rgba(207, 0, 0, 0.5)), url("/img/n005.jpg");
+}
+
+.background-success {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(147, 255, 120, 0.15)), to(rgba(91, 255, 91, 0.5))), url("/img/n005.jpg");
+  background: linear-gradient(rgba(147, 255, 120, 0.15), rgba(91, 255, 91, 0.5)), url("/img/n005.jpg");
+}
+
 button,
 .button {
   display: block;
