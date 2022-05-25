@@ -34,6 +34,18 @@ export default function Home() {
                     </a>
                 </Link>
             </section>
+
+            <section className={styles.heroGrid}>
+                <h1>¿Qué puede comer un perro?</h1>
+                <div>
+                    <div>
+                        <span>Descúbre que puede comer tu mascota</span>
+                        <p>Mi perro ha cogido algo del suelo y no sabes si es bueno o malo para su aparato digestivo</p>
+                        <p>Buscadog te proporciona información para conocer como puede afectar en un perro comer ciertos productos.</p>
+                    </div>
+                    <img src="/img/hero1.jpg" />
+                </div>
+            </section>
         </>
     )
 }

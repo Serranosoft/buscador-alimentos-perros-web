@@ -1,5 +1,4 @@
 .heroSection {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,7 +9,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
+  margin-bottom: 5rem;
 }
 
 .heroSection .heroTitle {
@@ -22,6 +22,42 @@
 .heroSection .muted {
   font-size: 1.25rem;
   padding: 0 2rem;
-  color: gray;
+  color: #3f3f3f;
   text-align: center;
+}
+
+.heroGrid {
+  margin-bottom: 5rem;
+}
+
+.heroGrid h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heroGrid > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroGrid > div span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.heroGrid > div p {
+  color: #3f3f3f;
+  font-size: 1.05rem;
+}
+
+.heroGrid > div img {
+  width: 100%;
 }
