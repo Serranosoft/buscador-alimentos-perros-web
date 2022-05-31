@@ -65,7 +65,7 @@ export async function fetchIngredientByName(name) {
     });
     const data = response.data.values;
     data.shift();
-
+    
     data.forEach(ingredient => {
         if (removeAccents(ingredient[1]).toLowerCase() == addSpaces(name)) {
             result = {
@@ -75,6 +75,6 @@ export async function fetchIngredientByName(name) {
             }
         }
     })
-
+    console.log(result);
     return result;
 }

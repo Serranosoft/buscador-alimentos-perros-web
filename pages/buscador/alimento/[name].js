@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Link from "next/link";
 
 export default function Ingrediente(props) {
-
+//    console.log(props);
     useEffect(() => {
         if (props.suitable != undefined) {
             if (props.suitable) {
@@ -74,7 +74,7 @@ export async function getStaticPaths() {
             params: {name: el}
         }
     }) */
-    let paths = [{params: {name: "Manzana"}}];
+    let paths = [];
     return {
         paths,
         fallback: true
@@ -84,6 +84,5 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const { params } = context
     let result = await fetchIngredientByName(params.name);
-    console.log(result);
     return { props: result }
 }
