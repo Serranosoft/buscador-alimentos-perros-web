@@ -4,7 +4,6 @@ import { removeAccents, addSpaces } from "../../utils/strings";
 const IngredientesHoja = "Hoja 2"
 
 export async function fetchExcel() {
-    let result = [];
     const target = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
     const jwt = new google.auth.JWT(
         process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
@@ -19,10 +18,14 @@ export async function fetchExcel() {
     });
     const cols = response.data.values;
     cols.shift();
-    cols.forEach(ingredient => {
-        result.push({id: ingredient[0], name: ingredient[1], descr: ingredient[2] != undefined ? ingredient[2] : null})
-    })
-    return result;
+    if (cols) {
+        let result = [];
+        cols.forEach(ingredient => {
+            result.push({id: ingredient[0], name: ingredient[1], descr: ingredient[2] != undefined ? ingredient[2] : null})
+        })
+        return result;
+    }
+    return "error"
 }
 
 export async function fetchAllIngredientNames() {
@@ -65,7 +68,6 @@ export async function fetchIngredientByName(name) {
     });
     const data = response.data.values;
     data.shift();
-    
     data.forEach(ingredient => {
         if (removeAccents(ingredient[1]).toLowerCase() == addSpaces(name)) {
             result = {
@@ -73,8 +75,11 @@ export async function fetchIngredientByName(name) {
                 descr: ingredient[2] != undefined ? ingredient[2] : "Ha ocurrido un error en la descripción. Lo sentimos :(",
                 suitable: ingredient[3] == "Si" ? true : false
             }
+            console.log(result);
+            return result;
         }
     })
-    console.log(result);
+    
+
     return result;
 }

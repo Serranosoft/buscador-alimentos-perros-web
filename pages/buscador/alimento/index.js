@@ -106,7 +106,6 @@ export default function BuscadorAlimentos({ ingredients }) {
         }).join('');
         setMatches(matches)
     }
-
 }
 
 export async function getServerSideProps() {
