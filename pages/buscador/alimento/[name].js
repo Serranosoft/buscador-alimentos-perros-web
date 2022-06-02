@@ -1,11 +1,11 @@
-import { fetchExcel, fetchIngredientByName } from "../../api/excel"
+import { /* fetchExcel, */ fetchAllIngredientNames, fetchIngredientByName } from "../../api/excel"
 import styles from '../../../styles/css/Ingredient.module.css'
 import { useEffect } from 'react';
 import Head from 'next/head'
 import Link from "next/link";
 
 export default function Ingrediente(props) {
-
+    console.log(props);
     useEffect(() => {
         if (props.result != undefined) {
             if (props.result.suitable) {
@@ -70,13 +70,13 @@ export default function Ingrediente(props) {
 }
 
 export async function getStaticPaths() {
-    /* let result = await fetchAllIngredientNames();
+    let result = await fetchAllIngredientNames();
     let paths = result.map(el => {
         return {
             params: {name: el}
         }
-    }) */
-    let paths = [];
+    })
+    // let paths = [];
     return {
         paths,
         fallback: true
@@ -86,12 +86,12 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const { params } = context
     let result = await fetchIngredientByName(params.name);
-    let ingredients = await fetchExcel();
+    // let ingredients = await fetchExcel();
     
     return { 
         props: {
-            result,
-            ingredients
+            result: result/* ,
+            ingredients */
         }
     }
 }
