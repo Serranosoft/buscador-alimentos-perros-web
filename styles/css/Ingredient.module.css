@@ -20,7 +20,7 @@
   bottom: 0px;
   left: 0px;
   background-size: cover;
-  opacity: 0.35;
+  opacity: 0.15;
 }
 
 .container > * {
@@ -37,7 +37,7 @@
 }
 
 .container > img {
-  height: 10rem;
+  height: 9rem;
   -webkit-filter: drop-shadow(10px 5px 5px gray);
           filter: drop-shadow(10px 5px 5px gray);
 }
@@ -47,7 +47,7 @@
   padding: 0.3rem 2rem;
   margin: 2rem 0;
   border-radius: 0.4rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 2rem;
   word-spacing: 0.2rem;
   -webkit-box-shadow: 0 0 10px gray;

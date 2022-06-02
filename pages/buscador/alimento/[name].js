@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Link from "next/link";
 
 export default function Ingrediente(props) {
-//    console.log(props);
+    
     useEffect(() => {
         if (props.suitable != undefined) {
             if (props.suitable) {
@@ -30,6 +30,7 @@ export default function Ingrediente(props) {
                 <meta name="twitter:description" content={`¿Un perro puede comer ${props.name}? Respuestas rápidas en Buscadog`}></meta>
                 <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
+        <main className="mainContainer">
             <section className={styles.container}>
                 <div id="background-container" className={styles.background}></div>
                 <h1>¿Un perro puede comer <span className={styles.headingVariable}>{props.name}</span>?</h1>
@@ -63,6 +64,7 @@ export default function Ingrediente(props) {
                     </div>
                 </div>
             </section>
+        </main>
         </>
     )
 }

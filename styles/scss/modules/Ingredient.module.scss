@@ -13,7 +13,7 @@ $color6: #ffccd0;
         bottom: 0px;
         left: 0px;
         background-size: cover;
-        opacity: 0.35;
+        opacity: 0.15;
     }
     & > * {
         position: relative;
@@ -28,7 +28,7 @@ $color6: #ffccd0;
     }
 
     & > img {
-        height: 10rem;
+        height: 9rem;
         filter: drop-shadow(10px 5px 5px gray);
     }
 
@@ -37,7 +37,7 @@ $color6: #ffccd0;
         padding: 0.3rem 2rem;
         margin: 2rem 0;
         border-radius: 0.4rem;
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         line-height: 2rem;
         word-spacing: 0.2rem;
         box-shadow: 0 0 10px gray;

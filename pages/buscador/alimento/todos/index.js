@@ -7,21 +7,23 @@ import Logo from '../../../../components/Logo';
 export default function AllIngredients(props) {
 
     return (
-        <section className={styles.container}>
-            <h1>Listado de todos los alimentos saludables y no saludables para un perro</h1>
-            <div className={styles.logoWrapper}><p>Buscadog</p><Logo /></div>
-            <div className={styles.ingredientWrapper}>
-                {props.ingredient.map(ingr => {
-                    return (
-                        <Link key={formatToUrl(removeAccents(ingr))} href={`/buscador/alimento/${formatToUrl(removeAccents(ingr))}`}>
-                            <a>
-                                {ingr}
-                            </a>
-                        </Link>
-                    )
-                })}
-            </div>
-        </section>
+        <main className="mainContainer">
+            <section className={styles.container}>
+                <h1>Listado de todos los alimentos saludables y no saludables para un perro</h1>
+                <div className={styles.logoWrapper}><p>Buscadog</p><Logo /></div>
+                <div className={styles.ingredientWrapper}>
+                    {props.ingredient.map(ingr => {
+                        return (
+                            <Link key={formatToUrl(removeAccents(ingr))} href={`/buscador/alimento/${formatToUrl(removeAccents(ingr))}`}>
+                                <a>
+                                    {ingr}
+                                </a>
+                            </Link>
+                        )
+                    })}
+                </div>
+            </section>
+        </main>
     )
 }
 

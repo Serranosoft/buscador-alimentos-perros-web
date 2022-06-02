@@ -1,4 +1,4 @@
-.heroSection {
+.mainSection .heroSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,38 +9,62 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5rem 0;
-  margin-bottom: 5rem;
+  padding: 2.5rem 28%;
+  margin-bottom: 14rem;
 }
 
-.heroSection .heroTitle {
+.mainSection .heroSection .heroTitle {
   font-size: 2.6rem;
   font-weight: bold;
   text-align: center;
 }
 
-.heroSection .muted {
+.mainSection .heroSection .muted {
   font-size: 1.25rem;
   padding: 0 2rem;
   color: #3f3f3f;
   text-align: center;
 }
 
-.heroGrid {
-  margin-bottom: 5rem;
+.mainSection .videoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5dfdca50;
+  margin: 14rem 0;
+  padding: 2rem 0;
+  border-radius: 30rem;
 }
 
-.heroGrid h1 {
-  font-size: 1.8rem;
+.mainSection .videoSection video {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30rem;
+}
+
+.mainSection .heroGrid {
+  margin-bottom: 5rem;
+  padding: 0 15%;
+}
+
+.mainSection .heroGrid h1 {
+  font-size: 2.65rem;
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.heroGrid > div {
+.mainSection .heroGrid > div {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1.5fr;
-      grid-template-columns: 1fr 1.5fr;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
   gap: 2rem;
   width: 100%;
   -webkit-box-pack: justify;
@@ -48,16 +72,16 @@
           justify-content: space-between;
 }
 
-.heroGrid > div span {
+.mainSection .heroGrid > div span {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.heroGrid > div p {
+.mainSection .heroGrid > div p {
   color: #3f3f3f;
   font-size: 1.05rem;
 }
 
-.heroGrid > div img {
+.mainSection .heroGrid > div img {
   width: 100%;
 }

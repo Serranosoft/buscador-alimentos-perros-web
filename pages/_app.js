@@ -14,9 +14,7 @@ function MyApp({ Component, pageProps }) {
             <link rel="icon" href="/img/huella.svg" />
         </Head>
         <Header />
-        <main className="mainContainer">
-            <Component {...pageProps} />
-        </main>
+        <Component {...pageProps} />
         <Footer />
     </>)
 }

@@ -20,32 +20,39 @@ export default function Home() {
                 <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                 <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
-            <section className={styles.heroSection}>
-                <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
-                <p className={styles.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
-                <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
-                <Link href="/buscador/alimento">
-                    <a>
-                        <button className="CTA"> Prueba BuscaDog Gratis
-                            <div className="icon">
-                                <CTA />
-                            </div>
-                        </button>
-                    </a>
-                </Link>
-            </section>
-
-            <section className={styles.heroGrid}>
-                <h1>¿Qué puede comer un perro?</h1>
-                <div>
+            <main className={styles.mainSection}>
+                <section className={styles.heroSection}>
+                    <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
+                    <p className={styles.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
+                    <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
+                    <Link href="/buscador/alimento">
+                        <a>
+                            <button className="CTA"> Prueba BuscaDog Gratis
+                                <div className="icon">
+                                    <CTA />
+                                </div>
+                            </button>
+                        </a>
+                    </Link>
+                </section>
+                <section className={styles.videoSection}>
+                    <video playsInline autoPlay muted loop poster="https://images.unsplash.com/photo-1620222071550-a5c7f8b600ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMDY4NDIyNA&ixlib=rb-1.2.1&q=80&w=400">
+                    <source type="video/mp4" src="/videos/hero-video.mp4" />
+                    <source src="https://cdn.videvo.net/videvo_files/video/free/2019-07/small_watermarked/Raw_Vegan_Blueberry_Cake_Cut_Birthday_Cooking_preview.webm" type="video/mp4" />
+                    </video>
+                </section>
+                <section className={styles.heroGrid}>
+                    <h1>¿Qué puede comer un perro?</h1>
                     <div>
-                        <span>Descúbre que puede comer tu mascota</span>
-                        <p>Mi perro ha cogido algo del suelo y no sabes si es bueno o malo para su aparato digestivo</p>
-                        <p>Buscadog te proporciona información para conocer como puede afectar en un perro comer ciertos productos.</p>
+                        <div>
+                            <span>Descúbre que puede comer tu mascota</span>
+                            <p>Mi perro ha cogido algo del suelo y no sabes si es bueno o malo para su aparato digestivo</p>
+                            <p>Buscadog te proporciona información para conocer como puede afectar en un perro comer ciertos productos.</p>
+                        </div>
+                        <img src="/img/hero1.jpg" />
                     </div>
-                    <img src="/img/hero1.jpg" />
-                </div>
-            </section>
+                </section>
+            </main>
         </>
     )
 }
