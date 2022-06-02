@@ -76,7 +76,6 @@ export async function fetchIngredientByName(name) {
                 suitable: ingredient[3] == "Si" ? true : false
             }
             console.log(result);
-            return result;
         }
     })
     
