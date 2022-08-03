@@ -1,4 +1,4 @@
-import s from '../styles/css/LoadingBar.module.css';
+import s from '../styles/css/Loadingbar.module.css';
 
 const Loading = () => {
     return (
