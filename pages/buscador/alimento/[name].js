@@ -111,18 +111,18 @@ export default function Ingrediente({data}) {
 export async function getStaticPaths() {
     let { data } = await supabase.from("Ingredientes").select("nombre");
     
-    let paths = data.map((ingr) => ({
+    const paths = data.map((ingr) => ({
         params: { name: ingr["nombre"].toLowerCase()}
     }))
     return {
-        paths: paths,
-        fallback: true
+        paths,
+        fallback: false
     }
 }
 
 export async function getStaticProps(context) {
     const { params } = context
-
+    console.log(params);
     let ingredient = params.name.charAt(0).toUpperCase() + params.name.slice(1);
     
     let { data } = 
