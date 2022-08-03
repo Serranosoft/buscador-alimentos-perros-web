@@ -1,6 +1,101 @@
 $color6: #ffccd0;
 
-.container {
+.root {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    section {
+        max-width: 1300px;
+        & > div {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 6rem;
+            margin: 3.5rem 0;
+            .sidebar {
+                font-size: var(--font-size-base);
+                .notification {
+                    padding: 1rem 1.2rem;
+                    background-color: #0096aa;
+                    border-radius: 1rem;
+                }
+                .suggestions {
+                    margin: 2rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    & > span {
+                        font-weight: bold;
+                        text-align: center;
+                        margin: 2rem 0;
+                    }
+                    & > div {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        justify-content: center;
+                        gap: 1rem;
+                        span {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    font-size: var(--font-size-xl);
+                    span {
+                        text-transform: lowercase;
+                        position: relative;
+                        &::after {
+                            content: " ";
+                            display: block;
+                            position: absolute;
+                            bottom: 0px;
+                            right: 0;
+                            width: 100%;
+                            border-top: 3px solid #0f6441;
+                            border-radius: 100%;
+                            transform: rotate(-2deg);
+                        }
+                    }
+                }
+                & > div .description {
+                    margin-top: 5rem;
+                    font-size: var(--font-size-base);
+                    line-height: 1.85;
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                    font-weight: 300;
+                    span {
+                        font-family: 'Crimson Text', serif;
+                        margin-right: 0.75rem;
+                        font-size: calc(var(--font-size-xxl) * 1.1);
+                        font-weight: bold;
+                        line-height: 0;
+                        font-style: italic;
+                        position: relative;
+                        /* &::after {
+                            content: " ";
+                            position: absolute;
+                            bottom: 12px;
+                            left: 0;
+                            width: 80%;
+                            border-top: 5px solid rgb(206, 0, 0);
+                        } */
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* .container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -71,4 +166,4 @@ $color6: #ffccd0;
             text-align: center;
         }
     }
-}
+} */

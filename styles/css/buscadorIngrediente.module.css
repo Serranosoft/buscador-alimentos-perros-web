@@ -12,17 +12,6 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  /* &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-image: url("/img/n005.jpg");
-        background-size: cover;
-        opacity: 0.09;
-    } */
 }
 
 .container > * {

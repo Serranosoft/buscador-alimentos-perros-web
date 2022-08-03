@@ -7,5 +7,5 @@ export function formatToUrl(str) {
 }
 
 export function addSpaces(str) {
-    return str.replace(new RegExp("\\+","g"), " ").toLowerCase();
+    return str.replace(new RegExp("\\+","g"), " ")
 }
