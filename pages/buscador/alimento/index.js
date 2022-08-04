@@ -119,7 +119,7 @@ export default function BuscadorAlimentos({ ingredients }) {
                 const regex = new RegExp(removeAccents(letters), 'gi');
                 const ingrMatched = removeAccents(ingredient.nombre).replace(regex, `<span style="background-color:#5DFDCB">${letters}</span>`)
                 i++;
-                matches.push({ id: ingredient.ID, html: `<p>${ingrMatched}</p>`, url: removeAccents(formatToUrl(ingredient.nombre)), name: ingredient.nombre })
+                matches.push({ id: ingredient.ID, html: `<p>${ingrMatched}</p>`, url: formatToUrl(ingredient.url), name: ingredient.nombre })
             }
         }).join('');
         setMatches(matches)
@@ -128,7 +128,7 @@ export default function BuscadorAlimentos({ ingredients }) {
 
 export async function getServerSideProps() {
 
-    let { data,} = await supabase.from('Ingredientes').select(`ID, nombre, descripcion`);
+    let { data,} = await supabase.from('Ingredientes').select(`ID, nombre, descripcion, url`);
     let ingredients = data;
     return {
         props: { ingredients }
