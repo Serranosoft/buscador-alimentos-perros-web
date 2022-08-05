@@ -17,11 +17,6 @@ $color6: #ffccd0;
             margin: 3.5rem 0;
             .sidebar {
                 font-size: var(--font-size-base);
-                .notification {
-                    padding: 1rem 1.2rem;
-                    background-color: #0096aa;
-                    border-radius: 1rem;
-                }
                 .suggestions {
                     margin: 2rem 0;
                     display: flex;
@@ -29,15 +24,27 @@ $color6: #ffccd0;
                     & > span {
                         font-weight: bold;
                         text-align: center;
-                        margin: 2rem 0;
                     }
                     & > div {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         justify-content: center;
-                        gap: 1rem;
-                        span {
-                            text-align: center;
+                        gap: 3rem 1rem;
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.3rem;
+                            transition: all 0.3s;
+                            cursor: pointer;
+                            &:hover {
+                                transform: scale(0.9)
+                            }
+                            img {
+                                height: 4rem;
+                            }
+                            span {
+                                text-align: center;
+                            }
                         }
                     }
                 }
