@@ -25,22 +25,30 @@ export default function AllIngredients({ ingredients }) {
             {!ready ?
                 <Loading />
                 :
-                <section className={s.root}>
-                    <div className={s.container}>
-                        <h1>Listado de todos los alimentos organicos e inorganicos para un perro</h1>
-                        <div className={s.ingredientWrapper}>
-                            {data.map(ingredient => {
-                                return (
-                                    <Link key={ingredient.ID} href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}>
-                                        <a>
-                                            {ingredient.nombre}
-                                        </a>
-                                    </Link>
-                                )
-                            })}
+                <>
+                    <Head>
+                        <title>Descubre cuáles son los alimentos aptos para dar de comer a tu perro.</title>
+                        <meta name="description" content={`Descubre cuáles son los alimentos aptos para dar de comer a tu perro.`} />
+                        <meta property="og:title" content={`Descubre cuáles son los alimentos aptos para dar de comer a tu perro.`} />
+                        <meta property="og:url" content="https://buscadog.net/buscador/alimento/todos" />
+                    </Head>
+                    <section className={s.root}>
+                        <div className={s.container}>
+                            <h1>Listado de todos los alimentos organicos e inorganicos para un perro</h1>
+                            <div className={s.ingredientWrapper}>
+                                {data.map(ingredient => {
+                                    return (
+                                        <Link key={ingredient.ID} href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}>
+                                            <a>
+                                                {ingredient.nombre}
+                                            </a>
+                                        </Link>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </>
             }
         </>
 

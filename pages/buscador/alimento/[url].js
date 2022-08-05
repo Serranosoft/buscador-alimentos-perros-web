@@ -23,16 +23,10 @@ export default function Ingrediente({ data }) {
                 :
                 <>
                     <Head>
-                        <title>¿Un perro puede comer {data.name}? Respuestas rápidas en BuscaDog</title>
-                        <meta name="description" content={`¿Un perro puede comer ${data.name}? Respuestas rápidas en Buscadog`} />
-                        <link rel="icon" href="/favicon.ico" />
-                        <meta property="og:title" content={`¿Un perro puede comer ${data.name}? Respuestas rápidas en Buscadog`} />
-                        <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
-                        <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
-                        <meta property="og:type" content="website"></meta>
-                        <meta name="twitter:card" content="summary_large_image"></meta>
-                        <meta name="twitter:description" content={`¿Un perro puede comer ${data.name}? Respuestas rápidas en Buscadog`}></meta>
-                        <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                        <title>¿Un perro puede comer {data.nombre}? Respuestas rápidas en BuscaDog</title>
+                        <meta name="description" content={`¿Un perro puede comer ${data.nombre}? Respuestas rápidas en Buscadog`} />
+                        <meta property="og:title" content={`¿Un perro puede comer ${data.nombre}? Respuestas rápidas en Buscadog`} />
+                        <meta property="og:url" content={`https://buscadog.net/buscador/alimento/${data.url}`} />
                     </Head>
                     <main className={s.root}>
                         <section>

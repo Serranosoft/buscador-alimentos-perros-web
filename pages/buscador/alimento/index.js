@@ -41,16 +41,10 @@ export default function BuscadorAlimentos({ ingredients }) {
                     <>
                         <Head>
                             <title>Datos sobre los alimentos en un perro [Respuestas rápidas]</title>
-                            <meta name="description" content="¿Mi perro puede comer huevo? ¿Un perro puede comer uvas? Encuentra información sobre que alimentos son saludables o perjudiciales para tu mascota" />
-                            <link rel="icon" href="/favicon.ico" />
-                            <meta property="og:title" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]" />
-                            <meta property="og:url" content="https://buscadog.net/buscador/alimento" />
-                            <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
-                            <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
-                            <meta property="og:type" content="website"></meta>
-                            <meta name="twitter:card" content="summary_large_image"></meta>
+                            <meta name="description" content={`Encuentra información sobre que alimentos son saludables o perjudiciales para tu mascota`} />
+                            <meta property="og:title" content={`Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]`} />
                             <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
-                            <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                            <meta property="og:url" content={`https://buscadog.net/buscador/alimento`} />
                         </Head>
                         <main className={s.root}>
                             <section className={s.container}>
