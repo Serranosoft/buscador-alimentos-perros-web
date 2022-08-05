@@ -25,7 +25,7 @@ export default function Header() {
             "platano",
             "piña",
             "caqui",
-            "manzanas",
+            "manzana",
             "peras", 
             "pipas",
             "manzana",
