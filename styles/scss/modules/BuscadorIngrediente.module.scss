@@ -1,0 +1,135 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .container {
+        width: 100%;
+        max-width: 850px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        & > * {
+            position: relative;
+            word-spacing: -0.45px;
+        }
+        .inputContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            h1 {
+                font-weight: bold;
+                letter-spacing: -1px;
+                font-size: 2.7rem;
+                margin: 2rem 0 1.4rem 0;
+            }
+            span {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+            .searchInput {
+                width: 85%;
+                padding: 0.7rem .5rem;
+                outline: 0;
+                border: 2px solid #5DFDCB;
+                border-radius: 0.2rem;
+                font-size: 1.1rem;
+                background-color: white;
+                color: black;
+                text-align: center;
+            }
+            .suggestions {
+                text-transform: lowercase;
+                border: 1px solid rgb(173, 173, 173);
+                box-shadow: 3px 3px 0 rgb(173, 173, 173);
+                width: 85%;
+                & > a {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    border-bottom: 1px solid lightgray;
+                    background-color: white;
+                    &:hover {
+                        background-color: #C9F9FF;
+                    }
+                }
+            }
+        }
+        .infoContainer {
+            margin: 7rem 0;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            p {
+                margin: 1.2rem 0;
+                line-height: 1.8rem;
+            }
+            .howTo {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2rem;
+                span {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+                ol {
+                    list-style: none;
+                    margin: 0 auto;
+                    padding: 0;
+                    counter-reset: item;
+                    li {
+                        margin: 1rem 0;
+                        counter-increment:item;
+                        &:before {
+                            margin-right: 0.5rem;
+                            margin-top: 0.5rem;
+                            content: counter(item);
+                            background:#5DFDCB;;
+                            border-radius: 100%;
+                            color:black;
+                            width: 2rem;
+                            text-align: center;
+                            display: inline-block;
+                            font-size: 1.2rem;
+                            font-weight:700
+                        }
+                    }
+                }
+            }
+            .content {
+                ul {
+                    margin: 0;
+                    padding: 1.5rem;
+                    list-style: none;
+                    background-color: white;
+                    box-shadow: 0 0 10px lightgray;
+                    li {
+                        &:before{
+                            content: "»";
+                            font-size: 2rem;
+                            color: #90D7FF;
+                            margin: 10rem 1rem 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .inputContainer {
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+}

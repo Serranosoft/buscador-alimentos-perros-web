@@ -1,0 +1,46 @@
+.CTA {
+    margin: 1rem 0;
+    padding: 1rem 4.5rem 1rem 2.5rem;
+    background: #5DFDCB;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    & > .icon {
+        background: white;
+        margin-left: 1em;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.2em;
+        width: 2.2em;
+        border-radius: 0.7em;
+        right: 0.3em;
+        transition: all 0.3s;
+    }
+    
+    &:hover .icon {
+        width: calc(100% - 0.6em);
+    }
+    
+    &>.icon svg {
+        width: 3rem;
+        transition: transform 0.3s;
+        color: black;
+    }
+    
+    &:hover .icon svg {
+        transform: translateX(0.1em);
+    }
+    
+    &:active .icon {
+        transform: scale(0.95);
+    }
+}

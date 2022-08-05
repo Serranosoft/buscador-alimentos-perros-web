@@ -1,0 +1,187 @@
+@charset "UTF-8";
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.root .container {
+  width: 100%;
+  max-width: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.root .container > * {
+  position: relative;
+  word-spacing: -0.45px;
+}
+
+.root .container .inputContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.root .container .inputContainer h1 {
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-size: 2.7rem;
+  margin: 2rem 0 1.4rem 0;
+}
+
+.root .container .inputContainer span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.root .container .inputContainer .searchInput {
+  width: 85%;
+  padding: 0.7rem .5rem;
+  outline: 0;
+  border: 2px solid #5DFDCB;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.root .container .inputContainer .suggestions {
+  text-transform: lowercase;
+  border: 1px solid #adadad;
+  -webkit-box-shadow: 3px 3px 0 #adadad;
+          box-shadow: 3px 3px 0 #adadad;
+  width: 85%;
+}
+
+.root .container .inputContainer .suggestions > a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+}
+
+.root .container .inputContainer .suggestions > a:hover {
+  background-color: #C9F9FF;
+}
+
+.root .container .infoContainer {
+  margin: 7rem 0;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+}
+
+.root .container .infoContainer p {
+  margin: 1.2rem 0;
+  line-height: 1.8rem;
+}
+
+.root .container .infoContainer .howTo {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.root .container .infoContainer .howTo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.root .container .infoContainer .howTo ol {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  counter-reset: item;
+}
+
+.root .container .infoContainer .howTo ol li {
+  margin: 1rem 0;
+  counter-increment: item;
+}
+
+.root .container .infoContainer .howTo ol li:before {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  content: counter(item);
+  background: #5DFDCB;
+  border-radius: 100%;
+  color: black;
+  width: 2rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.root .container .infoContainer .content ul {
+  margin: 0;
+  padding: 1.5rem;
+  list-style: none;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px lightgray;
+          box-shadow: 0 0 10px lightgray;
+}
+
+.root .container .infoContainer .content ul li:before {
+  content: "»";
+  font-size: 2rem;
+  color: #90D7FF;
+  margin: 10rem 1rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .inputContainer h1 {
+    font-size: 1.7rem;
+  }
+}
