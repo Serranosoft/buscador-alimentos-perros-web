@@ -10,9 +10,9 @@
 }
 
 .suggestions > span {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .suggestions > div {
