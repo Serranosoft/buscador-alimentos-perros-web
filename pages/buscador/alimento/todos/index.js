@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from '../../../../styles/css/allIngredients.module.css'
 import { formatToUrl, removeAccents } from "../../../../utils/strings";
-import Logo from '../../../../components/Logo';
+import Logo from '../../../../components/logo';
 
 export default function AllIngredients(/* props */) {
 

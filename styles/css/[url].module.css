@@ -27,10 +27,9 @@
       grid-template-columns: 1fr 2.2fr;
   gap: 6rem;
   margin: 3.5rem 0;
-}
-
-.root section > div .sidebar {
-  font-size: var(--font-size-base);
+  /* .sidebar {
+                font-size: var(--font-size-base);
+            } */
 }
 
 .root section > div .content {

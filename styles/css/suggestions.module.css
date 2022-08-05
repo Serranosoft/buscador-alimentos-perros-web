@@ -45,10 +45,6 @@
           transform: scale(0.9);
 }
 
-.suggestions > div a img {
-  height: 4rem;
-}
-
 .suggestions > div a span {
   text-align: center;
 }

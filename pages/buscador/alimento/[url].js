@@ -13,7 +13,7 @@ export default function Ingrediente({ data }) {
         if (data) {
             setReady(true)
         }
-    })
+    }, [data])
 
     return (
         <>
