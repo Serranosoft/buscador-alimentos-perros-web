@@ -16,14 +16,14 @@ export default function BuscadorAlimentos() {
                 <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                 <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
-            <main className="mainContainer">
-                <section className={styles.container}>
+            <section>
+                <div className={styles.container}>
 
                     <div className={styles.inputContainer}>
                         <h1>Sección en construcción...</h1>
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
         </>
     )
 }

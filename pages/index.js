@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/css/Home.module.css'
+import s from '../styles/css/home.module.css'
 import Link from "next/link";
 import CTA from '../components/CTA';
 
@@ -20,28 +20,24 @@ export default function Home() {
                 <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                 <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
             </Head>
-            <main className={styles.mainSection}>
-                <section className={styles.heroSection}>
-                    <span className={styles.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
-                    <p className={styles.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
-                    <p className={styles.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
+            <section className={s.mainSection}>
+                <div className={s.heroSection}>
+                    <span className={s.heroTitle}>Buscadores y herramientas para encontrar toda la información para tu perro</span>
+                    <p className={s.muted}>¿Preocupado por lo que puede o no puede comer tu perro?</p>
+                    <p className={s.muted}>Nuestro buscador interactivo te ayuda a encontrar información sobre que alimentos puede comer tu mascota.</p>
                     <Link href="/buscador/alimento">
                         <a>
-                            <button className="CTA"> Prueba BuscaDog Gratis
-                                <div className="icon">
-                                    <CTA />
-                                </div>
-                            </button>
+                            <CTA />
                         </a>
                     </Link>
-                </section>
-                <section className={styles.videoSection}>
+                </div>
+                <div className={s.videoSection}>
                     <video playsInline autoPlay muted loop poster="https://images.unsplash.com/photo-1620222071550-a5c7f8b600ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMDY4NDIyNA&ixlib=rb-1.2.1&q=80&w=400">
                     <source type="video/mp4" src="/videos/hero-video.mp4" />
                     <source src="https://cdn.videvo.net/videvo_files/video/free/2019-07/small_watermarked/Raw_Vegan_Blueberry_Cake_Cut_Birthday_Cooking_preview.webm" type="video/mp4" />
                     </video>
-                </section>
-                <section className={styles.heroGrid}>
+                </div>
+                <div className={s.heroGrid}>
                     <h1>¿Qué puede comer un perro?</h1>
                     <div>
                         <div>
@@ -51,8 +47,8 @@ export default function Home() {
                         </div>
                         <img src="/img/hero1.jpg" />
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
         </>
     )
 }

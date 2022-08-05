@@ -1,10 +1,11 @@
-$header-background: #C9F9FF;
-$header-muted: gray;
+/* $header-background: #C9F9FF;
+$header-muted: gray; */
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $header-background;
+    background-color: rgb(167, 232, 200);
     padding: 1.2rem 1.5rem;
 
     .menuContainer {
@@ -22,9 +23,6 @@ $header-muted: gray;
     .menuLogo {
         display: flex;
         gap: 1rem;
-        svg {
-            height: 3rem;
-        }
         & > a:first-child div {
             display: flex;
             align-items: center;
@@ -37,7 +35,7 @@ $header-muted: gray;
 
     .muted {
         font-size: 0.7rem;
-        color: $header-muted;
+        color: gray;
         border-radius: 100%;
     }
 }

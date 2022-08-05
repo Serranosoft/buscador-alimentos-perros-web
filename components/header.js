@@ -1,53 +1,54 @@
-import styles from '../styles/css/Header.module.css'
+import s from '../styles/css/header.module.css'
 import Link from "next/link";
-import { useEffect } from 'react';
-import Logo from './Logo';
+import { useEffect, useRef, useState } from 'react';
+import Logo from './logo';
 
 export default function Header() {    
     
+    const [randomStatement, setRandomStatement] = useState(null);
+    const statement = useRef(null);
+
     useEffect(() => {
         action();
     }, [])
 
+    useEffect(() => {
+        if (randomStatement) {
+            statement.current.textContent = randomStatement
+        }
+    }, [randomStatement])
+
+
     function action() {
         let messages = [
-            "uvas?",
-            "plátanos?",
-            "papeles?",
-            "cartón?",
-            "manzanas?",
-            "peras?", 
-            "carne?",
-            "huesos de pollo?",
-            "huevos?",
-            "jamón serrano?"
+            "tomate",
+            "platano",
+            "piña",
+            "caqui",
+            "manzanas",
+            "peras", 
+            "pipas",
+            "manzana",
+            "naranja",
+            "patata"
         ]
 
-        document.getElementById("ingredient-statement").textContent = messages[Math.floor(Math.random() * (10 - 0) + 0)];
+        setRandomStatement(messages[Math.floor(Math.random() * (10 - 0) + 0)])
     }
 
     return (
-        <header className={styles.header}>
-            <div className={styles.menuLogo}>
+        <header className={s.header}>
+            <div className={s.menuLogo}>
                 <Link href="/">
                     <a>
-                        <div>
-                            <Logo />
-                            <span>BuscaDog</span>
-                        </div>
-
+                        <Logo />
                     </a>
                 </Link>
-                <div className={styles.separator}></div>
-                <Link href="/buscador/alimento">
-                    <a>¿Puede comer un perro <span id="ingredient-statement" className={styles.ingredientStatement}></span> 👈 <span className={styles.muted}>Prueba nuestra herramienta</span></a>
+                <div className={s.separator}></div>
+                <Link href={`/buscador/alimento/${randomStatement}`}>
+                    <a>¿Puede comer un perro <span ref={statement} id="ingredient-statement" className={s.ingredientStatement}></span>? 👈 <span className={s.muted}>Prueba nuestra herramienta</span></a>
                 </Link>
             </div>
-            {/* <div className={styles.menuContainer}>
-                <Link href="/enlace1"><a>Enlace de menú 1</a></Link>
-                <Link href="/enlace2"><a>Enlace de menú 2</a></Link>
-                <Link href="/enlace3"><a>Enlace de menú 3</a></Link>
-            </div> */}
         </header>
     )
 }

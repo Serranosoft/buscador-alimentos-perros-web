@@ -17,3 +17,7 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+main {
+  min-height: 850px;
+}

@@ -1,6 +1,21 @@
-import * as React from "react"
+import * as React from "react";
+import s from "../styles/css/cta.module.css";
 
-const CTA = (props) => (
+
+export default function CTA() {
+
+  return (
+    <button className={s.CTA}>
+      Prueba Buscadog
+      <div className={s.icon}>
+        <SVG />
+      </div>
+    </button>
+  )
+}
+
+
+const SVG = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 128 128"
@@ -18,5 +33,3 @@ const CTA = (props) => (
     />
   </svg>
 )
-
-export default CTA

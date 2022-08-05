@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from '../../../styles/css/buscadorIngrediente.module.css'
+import s from '../../../styles/css/buscadorIngrediente.module.css'
 import { useState, useEffect } from "react";
 import { formatToUrl, removeAccents } from "../../../utils/strings";
 import { useRouter } from "next/router";
 import { supabase } from '../../../utils/supabaseClient';
-import Loading from "../../../components/loading";
+import Loading from "../../../components/Loading";
 
 export default function BuscadorAlimentos({ ingredients }) {
 
@@ -52,13 +52,13 @@ export default function BuscadorAlimentos({ ingredients }) {
                             <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                             <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
                         </Head>
-                        <main className="mainContainer">
-                            <section className={styles.container}>
-                                <div className={styles.inputContainer}>
+                        <main className={s.root}>
+                            <section className={s.container}>
+                                <div className={s.inputContainer}>
                                     <h1>¿Qué alimentos son saludables o perjudiciales para mi perro?</h1>
                                     <span>Descúbre como afecta los distintos productos orgánicos e inorganicos en la salud de tu mascota favorita</span>
-                                    <input type="text" className={styles.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
-                                    <div id="ingredient-suggestions" className={styles.suggestions}>
+                                    <input type="text" className={s.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
+                                    <div id="ingredient-suggestions" className={s.suggestions}>
                                         {matches.map(el => {
                                             return (
                                                 <Link key={el.id} href={`/buscador/alimento/${el.url}`}><a dangerouslySetInnerHTML={{ __html: el.html }} /></Link>
@@ -66,8 +66,8 @@ export default function BuscadorAlimentos({ ingredients }) {
                                         })}
                                     </div>
                                 </div>
-                                <div className={styles.infoContainer}>
-                                    <div className={styles.howTo}>
+                                <div className={s.infoContainer}>
+                                    <div className={s.howTo}>
                                         <span>¿Cómo funciona el buscador?</span>
                                         <p>Este buscador automático te proporcionará resultados inmediatos que coincidan con el alimento, ingrediente u objeto que hayas escrito.</p>
                                         <ol>
@@ -76,7 +76,7 @@ export default function BuscadorAlimentos({ ingredients }) {
                                             <li>¡Obtén información al instante!</li>
                                         </ol>
                                     </div>
-                                    <div className={styles.content}>
+                                    <div className={s.content}>
                                         <h2>¿Qué comida puede comer un perro?</h2>
                                         <p>La mejor comida para nuestra mascota favorita consta de dos tipos: Dieta Barf compuesta por alimentos humanos crudos (Carnes, pescados, fruta...) y el tradicional pienso canino ya procesado y preparado especialmente para ellos</p>
                                         <p>¿Se te ha caído algo al suelo, tu amigo perruno se lo ha tragado y no sabes si es malo?</p>

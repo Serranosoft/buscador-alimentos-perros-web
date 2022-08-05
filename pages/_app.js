@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/header';
-import '../styles/css/common.css';
+import '../styles/css/globals.css';
 import '../styles/css/variables.css';
 import Footer from '../components/footer';
 
@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }) {
             <link rel="icon" href="/img/huella.svg" />
         </Head>
         <Header />
-        <Component {...pageProps} />
+        <main>
+            <Component {...pageProps} />
+        </main>
         <Footer />
     </>)
 }
