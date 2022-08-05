@@ -1,33 +1,56 @@
 import Link from "next/link";
-import styles from '../../../../styles/css/AllIngredients.module.css'
+import s from '../../../../styles/css/AllIngredients.module.css'
 import { formatToUrl, removeAccents } from "../../../../utils/strings";
 import Logo from '../../../../components/Logo';
+import { supabase } from "../../../../utils/supabaseClient";
+import { useEffect, useState } from "react";
+import Loading from "../../../../components/Loading";
 
-export default function AllIngredients(/* props */) {
+export default function AllIngredients({ ingredients }) {
+    console.log(ingredients);
+
+    const [ready, setReady] = useState(false);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        if (ingredients) {
+            setData(ingredients.filter(ingredient => ingredient.descripcion));
+            setReady(true);
+            console.log(ingredients);
+        }
+    }, [ingredients])
 
     return (
-        <section>
-            {/* <div className={styles.container}>
-                <h1>Listado de todos los alimentos saludables y no saludables para un perro</h1>
-                <div className={styles.logoWrapper}><p>Buscadog</p><Logo /></div>
-                <div className={styles.ingredientWrapper}>
-                    {props.ingredient.map(ingr => {
-                        return (
-                            <Link key={formatToUrl(removeAccents(ingr))} href={`/buscador/alimento/${formatToUrl(removeAccents(ingr))}`}>
-                                <a>
-                                    {ingr}
-                                </a>
-                            </Link>
-                        )
-                    })}
-                </div>
-            </div> */}
-        </section>
+        <>
+            {!ready ?
+                <Loading />
+                :
+                <section className={s.root}>
+                    <div className={s.container}>
+                        <h1>Listado de todos los alimentos organicos e inorganicos para un perro</h1>
+                        <div className={s.ingredientWrapper}>
+                            {data.map(ingredient => {
+                                return (
+                                    <Link key={ingredient.ID} href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}>
+                                        <a>
+                                            {ingredient.nombre}
+                                        </a>
+                                    </Link>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </section>
+            }
+        </>
+
+
     )
 }
 
-/* export async function getServerSideProps(context) {
-    const { params } = context
-    let result = await fetchAllIngredientNames();
-    return { props: { ingredient: result } }
-} */
+export async function getServerSideProps() {
+
+    const { data } = await supabase.from("Ingredientes").select("nombre, url, descripcion, ID");
+
+    return { props: { ingredients: data } }
+}

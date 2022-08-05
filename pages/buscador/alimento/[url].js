@@ -51,7 +51,7 @@ export default function Ingrediente({ data }) {
                                         </a>
                                     </Link>
                                     <div className={s.notification}>
-                                        <p>¡Te recomendamos visitar a un veterinario antes de tomar una decisión para obtener una recomendación cientifica y respaldada por un profesional!</p>
+                                        <p>¡Te recomendamos visitar a un veterinario antes de tomar una decisión para obtener una recomendación respaldada por un profesional!</p>
                                     </div>
                                 </div>
                                 <div className={s.sidebar}>                                    
