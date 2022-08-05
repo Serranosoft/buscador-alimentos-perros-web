@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from '../../styles/css/buscadorIngrediente.module.css'
+import styles from '../../styles/css/BuscadorIngrediente.module.css'
 
 export default function BuscadorAlimentos() {
 

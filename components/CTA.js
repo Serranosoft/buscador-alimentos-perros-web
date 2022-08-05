@@ -1,5 +1,5 @@
 import * as React from "react";
-import s from "../styles/css/cta.module.css";
+import s from "../styles/css/Cta.module.css";
 
 
 export default function CTA() {

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import s from '../styles/css/home.module.css'
+import s from '../styles/css/Home.module.css'
 import Link from "next/link";
 import CTA from '../components/CTA';
 

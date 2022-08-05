@@ -1,6 +1,6 @@
 
 import Link from 'next/link'
-import s from '../styles/css/suggestions.module.css'
+import s from '../styles/css/Suggestions.module.css'
 import Image from "next/image";
 
 export default function Suggestion() {

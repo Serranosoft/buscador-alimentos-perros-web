@@ -1,4 +1,4 @@
-import s from '../styles/css/footer.module.css'
+import s from '../styles/css/Footer.module.css'
 import Link from "next/link";
 
 export default function Footer() {    

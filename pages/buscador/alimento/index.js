@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import s from '../../../styles/css/buscadorIngrediente.module.css'
+import s from '../../../styles/css/BuscadorIngrediente.module.css'
 import { useState, useEffect } from "react";
 import { formatToUrl, removeAccents } from "../../../utils/strings";
 import { useRouter } from "next/router";

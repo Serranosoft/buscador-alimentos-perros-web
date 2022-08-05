@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '../../../../styles/css/allIngredients.module.css'
+import styles from '../../../../styles/css/AllIngredients.module.css'
 import { formatToUrl, removeAccents } from "../../../../utils/strings";
 import Logo from '../../../../components/logo';
 

@@ -1,4 +1,4 @@
-import s from '../styles/css/header.module.css'
+import s from '../styles/css/Header.module.css'
 import Link from "next/link";
 import { useEffect, useRef, useState } from 'react';
 import Logo from './logo';
