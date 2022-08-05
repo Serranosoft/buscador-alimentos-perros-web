@@ -12,7 +12,8 @@
 .suggestions > span {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2.5rem;
+  font-size: var(--font-size-base);
 }
 
 .suggestions > div {
