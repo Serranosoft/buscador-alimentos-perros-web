@@ -5,6 +5,7 @@ import Logo from '../../../../components/Logo';
 import { supabase } from "../../../../utils/supabaseClient";
 import { useEffect, useState } from "react";
 import Loading from "../../../../components/Loading";
+import Head from "next/head";
 
 export default function AllIngredients({ ingredients }) {
     console.log(ingredients);
