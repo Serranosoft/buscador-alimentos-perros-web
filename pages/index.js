@@ -26,7 +26,7 @@ export default function Home() {
                     </Link>
                 </div>
                 <div className={s.videoSection}>
-                    <video playsInline autoPlay muted loop poster="https://images.unsplash.com/photo-1620222071550-a5c7f8b600ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMDY4NDIyNA&ixlib=rb-1.2.1&q=80&w=400">
+                    <video playsInline autoPlay muted loop>
                     <source type="video/mp4" src="/videos/hero-video.mp4" />
                     </video>
                 </div>

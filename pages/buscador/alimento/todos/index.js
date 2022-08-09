@@ -17,7 +17,6 @@ export default function AllIngredients({ ingredients }) {
         if (ingredients) {
             setData(ingredients.filter(ingredient => ingredient.descripcion));
             setReady(true);
-            console.log(ingredients);
         }
     }, [ingredients])
 
