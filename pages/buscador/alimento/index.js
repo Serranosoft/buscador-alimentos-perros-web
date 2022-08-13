@@ -122,7 +122,7 @@ export default function BuscadorAlimentos({ ingredients }) {
 
 export async function getServerSideProps() {
 
-    let { data,} = await supabase.from('Ingredientes').select(`ID, nombre, descripcion, url`);
+    let { data} = await supabase.from('Ingredientes').select(`ID, nombre, descripcion, url`);
     let ingredients = data;
     return {
         props: { ingredients }

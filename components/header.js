@@ -23,7 +23,7 @@ export default function Header() {
         let messages = [
             "tomate",
             "platano",
-            "pina",
+            "piña",
             "caqui",
             "manzanas",
             "peras", 

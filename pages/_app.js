@@ -18,22 +18,6 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:type" content="website"></meta>
                 <meta name="twitter:card" content="summary_large_image"></meta>
                 <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
-
-
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBSP7PJK4H"></script>
-                <Script strategy="lazyOnload">
-                    {
-                        `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                                        
-                            gtag('config', 'G-MBSP7PJK4H');
-                        `
-                    }
-                </Script>
-
-
             </Head>
             <Header />
             <main>
