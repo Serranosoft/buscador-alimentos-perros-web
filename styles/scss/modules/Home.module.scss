@@ -1,71 +1,159 @@
-$color1: #5DFDCB;
-$color1-2: #bbffe9;
-$color2: #90D7FF;
-$color3: #C9F9FF;
-$color4: #BFD0E0;
-$color5: #B8B3BE;
-$color6: #ffccd0;
+.root {
 
-.mainSection {
-    .heroSection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2.5rem 28%;
-        margin-bottom: 14rem;
-        .heroTitle {
-            font-size: 2.6rem;
-            font-weight: bold;
-            text-align: center;
-        }
-        .muted {
-            font-size: 1.25rem;
-            padding: 0 2rem;
-            color: rgb(63, 63, 63);
-            text-align: center;
-        }
-    }
-    
-    .videoSection {
+    .hero {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #5dfdca50;
-        margin: 14rem 0;
-        padding: 2rem 0;
-        border-radius: 30rem;
-        video {
-            width: 50%;
-            object-fit: cover;
-            border-radius: 30rem;
+        padding: 0 2rem;
+        margin: 1rem 0 5.5rem 0;
+        &>div {
+            max-width: 1220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8rem;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                position: relative;
+
+                h1 {
+                    font-size: calc(var(--font-size-xxl)*0.9);
+                    margin: 0.75rem 0;
+                }
+
+                span {
+                    font-size: calc(var(--font-size-base)*1.1);
+                    margin-bottom: 1rem;
+                }
+
+            }
+
+            svg {
+                transform: scale(1.15);
+            }
         }
     }
-    
-    .heroGrid {
-        margin-bottom: 5rem;
-        padding: 0 15%;
-        h1 {
-            font-size: 2.65rem;
-            text-align: center;
-            margin-bottom: 4rem;
+
+    @media (max-width: 768px) {
+        .hero {
+            margin-bottom: 8.5rem;
+            & > div svg {
+                display: none;
+            }
         }
+    }
+
+
+    .popular {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 5.5rem 0;
+
+        h2 {
+            font-size: var(--font-size-xl);
+            margin: 1rem 0;
+            text-align: center;
+        }
+
         & > div {
+            max-width: 1120px;
+            display: flex;
+            flex-direction: column;
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 2rem;
-            width: 100%;
-            justify-content: space-between;
-            span {
-                font-size: 1.3rem;
-                font-weight: bold;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem 4.5rem;
+            margin: 3rem 0;
+            padding: 0 1rem;
+            & > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 4px solid rgb(70, 70, 70);
+                padding: 2rem;
+                position: relative;
+                border-radius: 3.8rem;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.35rem;
+                    box-shadow: 3px 5px 0 rgb(131, 131, 131);
+                    border-radius: 3.8rem;
+                    
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 3.5px;
+                    left: 2px;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.35rem;
+                    box-shadow: 3px 5px 0 rgb(163, 163, 163);
+                    border-radius: 3.8rem;
+                    
+                }
+
+                .popularTitle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    p {
+                        font-size: calc(var(--font-size-base)*1.2);
+                        font-weight: bold;
+                        margin: 3rem 0;
+                    }
+                }
+
+                div:not(.popularTitle) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 3rem 2rem;
+                    text-align: center;
+                    max-width: 550px;
+                    a {
+                        font-size: var(--font-size-base);
+                        position: relative;
+                        z-index: 1;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 5px;
+                            bottom: -5px;
+                            left: 0;
+                            background-color: #a7e8c8;
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                            z-index: 0;
+                        }
+                        &:hover::before {
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
+                    }
+                }
             }
-            p {
-                color: rgb(63, 63, 63);
-                font-size: 1.05rem;
-            }
-            img {
-                width: 100%;
-                // height: 20rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .popular {
+            & > div {
+                grid-template-columns: 1fr;
             }
         }
     }
