@@ -56,7 +56,7 @@ export default function AllIngredients({ ingredients }) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const { data } = await supabase.from("Ingredientes").select("nombre, url, descripcion, ID");
 

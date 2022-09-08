@@ -22,7 +22,7 @@ export default function PoliticaDeCookies({ data }) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const data = await getPageById(14);
 

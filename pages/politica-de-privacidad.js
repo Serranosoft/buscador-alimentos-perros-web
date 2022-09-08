@@ -22,7 +22,7 @@ export default function PoliticaDePrivacidad({ data }) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const data = await getPageById(10);
 
