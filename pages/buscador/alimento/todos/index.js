@@ -38,11 +38,14 @@ export default function AllIngredients({ ingredients }) {
                             <div className={s.ingredientWrapper}>
                                 {data.map(ingredient => {
                                     return (
-                                        <Link key={ingredient.ID} href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}>
-                                            <a>
+                                        <>
+                                        {/* <Link key={ingredient.ID} href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}> */}
+                                            <a href={`/buscador/alimento/${formatToUrl(ingredient.url)}`}>
                                                 {ingredient.nombre}
                                             </a>
-                                        </Link>
+                                            
+                                        {/* </Link> */}
+                                        </>
                                     )
                                 })}
                             </div>
