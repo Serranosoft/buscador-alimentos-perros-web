@@ -22,9 +22,9 @@ export default function AllIngredients({ ingredients }) {
 
     return (
         <>
-            {!ready ?
+            {/* {!ready ?
                 <Loading />
-                :
+                : */}
                 <>
                     <Head>
                         <title>Descubre cuáles son los alimentos aptos para dar de comer a tu perro.</title>
@@ -52,7 +52,7 @@ export default function AllIngredients({ ingredients }) {
                         </div>
                     </section>
                 </>
-            }
+            {/* } */}
         </>
 
 
