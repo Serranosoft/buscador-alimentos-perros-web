@@ -20,6 +20,11 @@ export default function Footer() {
                     Política de cookies
                 </a>
             </Link>
+            <Link href="/sitemap_screaming_frog.xml">
+                <a target="_blank">
+                    Mapa del sitio
+                </a>
+            </Link>
         </footer>
     )
 }
