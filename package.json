@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "onlyBuild": "next build"
+    "build": "next build"
   },
   "dependencies": {
     "http2": "^3.3.7",
