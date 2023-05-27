@@ -30,3 +30,9 @@
 //         props: { data }
 //     }
 // }
+
+export default function PrivacyPolicy() {
+    return (
+        <></>
+    )
+}

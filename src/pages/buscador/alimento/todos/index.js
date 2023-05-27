@@ -1,3 +1,9 @@
+export default function AllIngredients() {
+    return (
+        <></>
+    )
+}
+
 // import Link from "next/link";
 // import s from '../../../../styles/css/AllIngredients.module.css'
 // import { formatToUrl, removeAccents } from "../../../../utils/strings";
