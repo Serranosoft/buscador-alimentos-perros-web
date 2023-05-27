@@ -68,7 +68,7 @@ export async function getAllSlugs() {
 export async function getTitleItems() {
     const data = await fetchAPI(`
         query NewQuery {
-            posts(where: {categoryName: "alimento"}, first: 200) {
+            posts(where: {categoryName: "/buscador/alimento"}, first: 200) {
               edges {
                 node {
                   id
