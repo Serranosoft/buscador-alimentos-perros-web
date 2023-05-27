@@ -1,7 +1,5 @@
 
-import Link from 'next/link'
 import styles from '@/styles/buscador-alimento/suggestions.module.scss'
-import Image from "next/image";
 import Anchor from './content/anchor';
 import Text from './content/text';
 

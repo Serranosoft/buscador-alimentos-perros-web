@@ -53,7 +53,7 @@ export async function getPostBySlug(category, slug) {
 export async function getAllSlugs() {
     const data = await fetchAPI(`
     {
-      posts(first: 100) {
+      posts(first: 200) {
         edges {
           node {
             slug
