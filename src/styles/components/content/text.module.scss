@@ -1,0 +1,21 @@
+.root {
+    font-size: clamp(1.13rem, 0.11vw + 1.1rem, 1.19rem);
+    margin: 0;
+    color: #000000;
+}
+
+.xl {
+    font-size: clamp(1.41rem, 0.32vw + 1.33rem, 1.58rem);
+    line-height: 1.05;
+}
+
+.xxl {
+    font-size: clamp(1.76rem, 0.64vw + 1.6rem, 2.11rem);
+    line-height: 1.05;
+}
+
+.xxxl {
+    font-size: clamp(3.5rem, 2vw + 3rem, 4rem);
+    font-weight: bold;
+    margin: 0;
+}
