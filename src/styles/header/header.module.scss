@@ -1,12 +1,14 @@
-/* $header-background: #C9F9FF;
-$header-muted: gray; */
-
 .header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(167, 232, 200);
     padding: 1.2rem 1.5rem;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(1px);
+    z-index: 9999;
 
     .menuContainer {
         display: flex;

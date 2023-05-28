@@ -6,59 +6,34 @@
     width: 100%;
     .container {
         width: 100%;
-        max-width: 850px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 auto;
+        margin: 5rem 0;
         & > * {
             position: relative;
-            word-spacing: -0.45px;
         }
         .inputContainer {
             width: 100%;
+            max-width: 768px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 1.5rem;
             h1 {
                 font-weight: bold;
                 letter-spacing: -1px;
                 font-size: 2.7rem;
-                margin: 2rem 0 1.4rem 0;
             }
-            
-            .searchInput {
-                width: 85%;
-                padding: 0.7rem .5rem;
-                outline: 0;
-                border: 2px solid #5DFDCB;
-                border-radius: 0.2rem;
-                font-size: 1.1rem;
-                background-color: white;
-                color: black;
-                text-align: center;
+
+            & > div {
+                margin-top: 1.5rem;
             }
-            .suggestions {
-                text-transform: lowercase;
-                border: 1px solid rgb(173, 173, 173);
-                box-shadow: 3px 3px 0 rgb(173, 173, 173);
-                width: 85%;
-                & > a {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    border-bottom: 1px solid lightgray;
-                    background-color: white;
-                    &:hover {
-                        background-color: #C9F9FF;
-                    }
-                }
-            }
+
         }
         .infoContainer {
-            margin: 7rem 0;
+            margin: 12rem 0;
             padding: 0 1rem;
             display: flex;
             flex-direction: column;

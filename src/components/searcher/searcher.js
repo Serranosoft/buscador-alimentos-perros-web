@@ -33,18 +33,16 @@ export default function Searcher({ ingredients }) {
     }
 
     return (
-        <>
-            <div className={styles.root}>
-                <input ref={input} type="text" className={styles.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
-                <div className={styles.suggestions}>
-                    {matches.map(el => {
-                        return (
-                            <Link key={el.id} href={`/buscador/alimento/${el.url}`}><span dangerouslySetInnerHTML={{ __html: el.html }}></span></Link>
-                        )
-                    })}
-                </div>
+        <div className={styles.root}>
+            <input ref={input} type="text" className={styles.searchInput} placeholder="¿Mi perro puede comer ..." onKeyUp={(e) => displayMatches(e.target.value)} onChange={(e) => displayMatches(e.target.value)} />
+            <div className={styles.suggestions}>
+                {matches.map(el => {
+                    return (
+                        <Link key={el.id} href={`/buscador/alimento/${el.url}`}><span dangerouslySetInnerHTML={{ __html: el.html }}></span></Link>
+                    )
+                })}
             </div>
-        </>
+        </div>
     )
 
 }

@@ -19,7 +19,7 @@ export default function BuscadorAlimentos({ ingredients }) {
                 <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                 <meta property="og:url" content={`https://buscadog.net/buscador/alimento`} />
             </Head>
-            <Container className={styles.root}>
+            <Container small className={styles.root}>
                 <div className={styles.container}>
                     <div className={styles.inputContainer}>
                         <H1>¿Qué alimentos son saludables o perjudiciales para mi perro?</H1>
