@@ -1,6 +1,5 @@
 import styles from '@/styles/searcher/searcher.module.scss'
 import { useRef, useState } from "react";
-import { formatToUrl, removeAccents } from "../../utils/strings";
 import Link from "next/link";
 
 export default function Searcher({ ingredients }) {
@@ -10,9 +9,9 @@ export default function Searcher({ ingredients }) {
 
     function findMatches(letters) {
         return ingredients.filter(ingredient => {
-            const regex = new RegExp(removeAccents(letters), 'gi');
+            const regex = new RegExp(letters, 'gi');
             if (letters != "") {
-                return removeAccents(ingredient.node.title).match(regex);
+                return ingredient.node.title.match(regex);
             }
             return "";
         })
@@ -24,10 +23,10 @@ export default function Searcher({ ingredients }) {
         let matches = [];
         matchArray.map(ingredient => {
             if (i < 5) {
-                const regex = new RegExp(removeAccents(letters), 'gi');
-                const ingrMatched = removeAccents(ingredient.node.title).replace(regex, `<span style="background-color:#5DFDCB">${letters}</span>`)
+                const regex = new RegExp(letters, 'gi');
+                const ingrMatched = ingredient.node.title.replace(regex, `<span style="background-color:#5DFDCB">${letters}</span>`)
                 i++;
-                matches.push({ id: ingredient.node.id, html: `${ingrMatched}`, url: formatToUrl(ingredient.node.slug), name: ingredient.node.title })
+                matches.push({ id: ingredient.node.id, html: `${ingrMatched}`, url: ingredient.node.slug, name: ingredient.node.title })
             }
         }).join('');
         setMatches(matches)
