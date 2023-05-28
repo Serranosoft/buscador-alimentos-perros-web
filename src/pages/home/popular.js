@@ -24,12 +24,12 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/caqui" target="_blank">Caquis</Anchor>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <div className={styles.title}>
                         <Text xl>Material Inorgánico</Text>
                     </div>
                     <div className={styles.items}>
-                        <Anchor href="/">Papel</Anchor>
+                        <Anchor href="/buscador/alimento/papel">Papel</Anchor>
                         <Anchor href="/"></Anchor>
                         <Anchor href="/"></Anchor>
                         <Anchor href="/"></Anchor>
@@ -38,50 +38,45 @@ export default function Popular() {
                         <Anchor href="/"></Anchor>
                         <Anchor href="/"></Anchor>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     <div className={styles.title}>
                         <Text xl>Verduras</Text>
                     </div>
                     <div className={styles.items}>
-                        <Anchor href="/">Col</Anchor>
-                        <Anchor href="/">Ensalada</Anchor>
-                        <Anchor href="/">Eneldo</Anchor>
-                        <Anchor href="/">Espárragos blancos</Anchor>
-                        <Anchor href="/">Champiñones</Anchor>
-                        <Anchor href="/">Escarola</Anchor>
-                        <Anchor href="/">Espárragos verdes</Anchor>
-                        <Anchor href="/">Coliflor</Anchor>
+                        <Anchor href="/buscador/alimento/col">Col</Anchor>
+                        <Anchor href="/buscador/alimento/rucula">Rúcula</Anchor>
+                        <Anchor href="/buscador/alimento/eneldo">Eneldo</Anchor>
+                        <Anchor href="/buscador/alimento/esparragos-blancos">Espárragos blancos</Anchor>
+                        <Anchor href="/buscador/alimento/champinones">Champiñones</Anchor>
+                        <Anchor href="/buscador/alimento/escarola">Escarola</Anchor>
+                        <Anchor href="/buscador/alimento/esparragos-verdes">Espárragos verdes</Anchor>
+                        <Anchor href="/buscador/alimento/coliflor">Coliflor</Anchor>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <div className={styles.title}>
                         <Text xl>Carnes</Text>
                     </div>
                     <div className={styles.items}>
-                        <Anchor href="/" target="_blank">Pollo</Anchor>
-                        <Anchor href="/" target="_blank">Ternera</Anchor>
-                        <Anchor href="/" target="_blank">Higado</Anchor>
-                        <Anchor href="/" target="_blank">Carne cruda</Anchor>
-                        <Anchor href="/" target="_blank">Croquetas</Anchor>
-                        <Anchor href="/" target="_blank">Bocadillo</Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
+                        <Anchor href="/buscador/alimento/pollo" target="_blank">Pollo</Anchor>
+                        <Anchor href="/buscador/alimento/ternera" target="_blank">Ternera</Anchor>
+                        <Anchor href="/buscador/alimento/higado" target="_blank">Higado</Anchor>
+                        <Anchor href="/buscador/alimento/pescado" target="_blank">Pescado</Anchor>
+                        <Anchor href="/buscador/alimento/pollo" target="_blank">Croquetas</Anchor>
+                        <Anchor href="/buscador/alimento/pollo" target="_blank">Bocadillo</Anchor>
+                        <Anchor href="/buscador/alimento/pollo" target="_blank"></Anchor>
+                        <Anchor href="/buscador/alimento/pollo" target="_blank"></Anchor>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     <div className={styles.title}>
                         <Text xl>Legumbres</Text>
                     </div>
                     <div className={styles.items}>
-                        <Anchor href="/" target="_blank">Guisantes</Anchor>
-                        <Anchor href="/" target="_blank">Garbanzos</Anchor>
-                        <Anchor href="/" target="_blank">Alubias</Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
-                        <Anchor href="/" target="_blank"></Anchor>
+                        <Anchor href="/buscador/alimento/guisantes" target="_blank">Guisantes</Anchor>
+                        <Anchor href="/buscador/alimento/garbanzos" target="_blank">Garbanzos</Anchor>
+                        <Anchor href="/buscador/alimento/alubias" target="_blank">Alubias</Anchor>
                     </div>
                 </div>
                 <div>
@@ -89,17 +84,18 @@ export default function Popular() {
                         <Text xl>Dulces</Text>
                     </div>
                     <div className={styles.items}>
-                        <Anchor href="/" target="_blank">Croissant</Anchor>
-                        <Anchor href="/" target="_blank">Copos de avena</Anchor>
-                        <Anchor href="/" target="_blank">Chocolate</Anchor>
-                        <Anchor href="/" target="_blank">Dulce de leche</Anchor>
-                        <Anchor href="/" target="_blank">Galletas saladas</Anchor>
-                        <Anchor href="/" target="_blank">Ensaimadas</Anchor>
-                        <Anchor href="/" target="_blank">Flan</Anchor>
-                        <Anchor href="/" target="_blank">Bombones</Anchor>
+                        <Anchor href="/buscador/alimento/croissant" target="_blank">Croissant</Anchor>
+                        <Anchor href="/buscador/alimento/copos-de-avena" target="_blank">Copos de avena</Anchor>
+                        <Anchor href="/buscador/alimento/chocolate" target="_blank">Chocolate</Anchor>
+                        <Anchor href="/buscador/alimento/dulce-de-leche" target="_blank">Dulce de leche</Anchor>
+                        <Anchor href="/buscador/alimento/galletas-saladas" target="_blank">Galletas saladas</Anchor>
+                        <Anchor href="/buscador/alimento/ensaimadas" target="_blank">Ensaimadas</Anchor>
+                        <Anchor href="/buscador/alimento/flan" target="_blank">Flan</Anchor>
+                        <Anchor href="/buscador/alimento/bombones" target="_blank">Bombones</Anchor>
+                        <Anchor href="/buscador/alimento/cereales" target="_blank">Cereales</Anchor>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <div className={styles.title}>
                         <Text xl>Bebidas</Text>
                     </div>
@@ -113,7 +109,7 @@ export default function Popular() {
                         <Anchor href="/" target="_blank"></Anchor>
                         <Anchor href="/" target="_blank"></Anchor>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
