@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import styles from '@/styles/home.module.scss'
-import Link from "next/link";
 import Container from '@/components/content/container';
 import Hero from './home/hero';
 import Popular from './home/popular';
 import { getTitleItems } from './api/wordpress';
+import Info1 from './home/info1';
+import Banner from './home/banner';
 
 export default function Home({ingredients}) {
 
@@ -21,7 +22,9 @@ export default function Home({ingredients}) {
             <Container className={styles.root}>
                 <div>
                     <Hero ingredients={ingredients} />
+                    <Banner />
                     <Popular />
+                    <Info1 />
                 </div>
             </Container>
         </>

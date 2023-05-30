@@ -19,9 +19,6 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/albaricoques" target="_blank">Albaricoques</Anchor>
                         <Anchor href="/buscador/alimento/bananas" target="_blank">Banana</Anchor>
                         <Anchor href="/buscador/alimento/fresas" target="_blank">Fresas</Anchor>
-                        <Anchor href="/buscador/alimento/granada" target="_blank">Granadas</Anchor>
-                        <Anchor href="/buscador/alimento/ciruelas" target="_blank">Ciruelas</Anchor>
-                        <Anchor href="/buscador/alimento/caqui" target="_blank">Caquis</Anchor>
                     </div>
                 </div>
                 {/* <div>
@@ -49,9 +46,6 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/eneldo">Eneldo</Anchor>
                         <Anchor href="/buscador/alimento/esparragos-blancos">Espárragos blancos</Anchor>
                         <Anchor href="/buscador/alimento/champinones">Champiñones</Anchor>
-                        <Anchor href="/buscador/alimento/escarola">Escarola</Anchor>
-                        <Anchor href="/buscador/alimento/esparragos-verdes">Espárragos verdes</Anchor>
-                        <Anchor href="/buscador/alimento/coliflor">Coliflor</Anchor>
                     </div>
                 </div>
                 {/* <div>
@@ -89,10 +83,6 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/chocolate" target="_blank">Chocolate</Anchor>
                         <Anchor href="/buscador/alimento/dulce-de-leche" target="_blank">Dulce de leche</Anchor>
                         <Anchor href="/buscador/alimento/galletas-saladas" target="_blank">Galletas saladas</Anchor>
-                        <Anchor href="/buscador/alimento/ensaimadas" target="_blank">Ensaimadas</Anchor>
-                        <Anchor href="/buscador/alimento/flan" target="_blank">Flan</Anchor>
-                        <Anchor href="/buscador/alimento/bombones" target="_blank">Bombones</Anchor>
-                        <Anchor href="/buscador/alimento/cereales" target="_blank">Cereales</Anchor>
                     </div>
                 </div>
                 {/* <div>

@@ -1,3 +1,5 @@
+@import "../colors.scss";
+
 .root {
     width: 100%;
     display: flex;
@@ -12,7 +14,7 @@
         width: 100%;
         padding: 0.7rem .5rem;
         outline: 0;
-        border: 2px solid #5DFDCB;
+        border: 2px solid $primary;
         border-radius: 0.2rem;
         font-size: 1.1rem;
         background-color: #ffffff;
@@ -24,16 +26,16 @@
         border: 1px solid rgb(173, 173, 173);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         width: 90%;
-        z-index: 1;
+        z-index: 999;
         a {
             width: 100%;
             display: flex;
             justify-content: center;
             text-align: center;
-            border-bottom: 1px solid lightgray;
+            border-bottom: 1px solid rgb(173, 173, 173);
             background-color: #ffffff;
             &:hover {
-                background-color: #5DFDCB;
+                background-color: $primary;
             }
             span {
                 margin: 1rem 0;

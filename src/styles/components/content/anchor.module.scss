@@ -1,4 +1,4 @@
-// @import "../colors.scss";
+@import "../../colors.scss";
 
 .root {
     position: relative;
@@ -13,7 +13,7 @@
         height: 5px;
         bottom: -5px;
         left: 0;
-        background-color: #a7e8c8;
+        background-color: $primary;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
         z-index: 0;

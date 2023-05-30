@@ -1,32 +1,28 @@
 @import "../../colors";
 
 .button {
-    padding: 0.85rem 1.85rem;
-    border-radius: 1.2rem;
+    padding: 0.35rem 1rem;
+    padding-bottom: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.35rem;
     font-weight: bold;
     letter-spacing: -1.5px;
-    background: linear-gradient(315deg, rgb(48, 48, 48) 0%, rgb(0, 0, 0) 100%);
+    // background: linear-gradient(315deg, rgb(48, 48, 48) 0%, rgb(0, 0, 0) 100%);
+    background-color: rgb(167, 232, 200);
     border: none;
     outline: none;
-    color: white;
+    color: #ffffff;;
     font-size: clamp(1.15rem, 0.30vw + 1.30rem, 1.4rem);
     white-space: pre;
     cursor: pointer;
-    &.highlight {
-        background: linear-gradient(315deg, rgb(153, 0, 255) 0%, rgb(0, 136, 255) 100%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: box-shadow 0.3s, transform 0.15s;
+    &:hover {
+        box-shadow: unset;
+        transform: scale(0.98);
     }
-}
-
-@mixin styles {
-    padding: 0.85rem 1.85rem;
-    border-radius: 1.2rem;
-    font-weight: bold;
-    letter-spacing: -1.5px;
-    background: linear-gradient(315deg, rgb(153, 0, 255) 0%, rgb(0, 136, 255) 100%);
-    border: none;
-    outline: none;
-    color: white;
-    font-size: clamp(1.15rem, 0.30vw + 1.30rem, 1.4rem);
-    white-space: pre;
-    cursor: pointer;
+    &.dark {
+        background-color: $secondary;
+        color: #000000;
+    }
 }
