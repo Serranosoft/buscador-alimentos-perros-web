@@ -8,8 +8,8 @@ export default function Popular() {
     return (
         <div className={styles.root}>
             <H2>Los alimentos mas buscados</H2>
-            <div className={styles.grid}>
-                <div>
+            <div className={`${styles.grid} aos-effect2-observer`}>
+                <div className="aos-effect2-el">
                     <div className={styles.title}>
                         <Text xl>Frutas</Text>
                     </div>
@@ -36,7 +36,7 @@ export default function Popular() {
                         <Anchor href="/"></Anchor>
                     </div>
                 </div> */}
-                <div>
+                <div className="aos-effect2-el">
                     <div className={styles.title}>
                         <Text xl>Verduras</Text>
                     </div>
@@ -63,7 +63,7 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/pollo" target="_blank"></Anchor>
                     </div>
                 </div> */}
-                <div>
+                <div className="aos-effect2-el">
                     <div className={styles.title}>
                         <Text xl>Legumbres</Text>
                     </div>
@@ -73,7 +73,7 @@ export default function Popular() {
                         <Anchor href="/buscador/alimento/alubias" target="_blank">Alubias</Anchor>
                     </div>
                 </div>
-                <div>
+                <div className="aos-effect2-el">
                     <div className={styles.title}>
                         <Text xl>Dulces</Text>
                     </div>

@@ -1,4 +1,5 @@
 import '@/styles/globals.scss';
+import '@/styles/aos/aos.scss';
 import Head from 'next/head';
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
