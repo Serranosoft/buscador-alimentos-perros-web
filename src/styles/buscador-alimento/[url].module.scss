@@ -10,15 +10,16 @@
     
     & > div {
         width: 100%;
-        display: grid;
-        grid-template-columns: 2.2fr 1fr;
-        gap: 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(2rem, 2vw + 4rem, 6rem);
         margin: 3.5rem 0 7rem 0;
+        padding: 0 1rem;
 
         .content {
             display: flex;
             flex-direction: column;
-
+            flex: 1 1 550px;
             p {
                 font-size: clamp(1.13rem, 0.11vw + 1.1rem, 1.19rem);
                 color: #000000;
@@ -29,6 +30,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                align-self: flex-start;
                 gap: 0.8rem;
                 cursor: pointer;
                 margin: 1.5rem 0 2rem 0;
@@ -87,6 +89,7 @@
 
         .sidebar {
             position: relative;
+            flex: 1 0 250px;
             div:last-child {
                 position: relative;
                 top: unset;
@@ -96,17 +99,6 @@
                 & > p {
                     font-weight: bold;
                 }
-            }
-        }
-    }
-
-}
-
-@media (max-width: 768px) {
-    .root {
-        section {
-            &>div {
-                grid-template-columns: 1fr;
             }
         }
     }
