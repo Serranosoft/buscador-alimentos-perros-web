@@ -4,11 +4,20 @@ import H1 from "@/components/content/h1";
 import styles from "@/styles/blog/[slug].module.scss";
 import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "../api/wordpress";
+import Head from "next/head";
 
 export default function slug({ data }) {
 
+    console.log(data);
+
     return (
         <>
+            <Head>
+                <title>{data.title} — Buscadog</title>
+                <meta name="description" content={`${data.title} — Buscadog`} />
+                <meta property="og:title" content={`${data.title} — Buscadog`} />
+                <meta property="og:url" content={`https://buscadog.net/blog/${data.slug}`} />
+            </Head>
             <Container fullscreen className={styles.root}>
                 <div className={styles.header}>
                     <div className={styles.titleWrapper}>
