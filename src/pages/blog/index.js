@@ -17,7 +17,7 @@ export default function Blog({ data, ingredients }) {
                         {
                             data.edges.map((blog) => {
                                 return (
-                                    <Link href={`/blog/${blog.node.slug}`}>
+                                    <Link key={blog.node.id} href={`/blog/${blog.node.slug}`}>
                                         <img alt={blog.node.featuredImage.node.altText} src={blog.node.featuredImage.node.sourceUrl} />
                                         <Text>{blog.node.title}</Text>
                                     </Link>
