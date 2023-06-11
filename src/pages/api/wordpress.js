@@ -81,3 +81,31 @@ export async function getTitleItems() {
     `);
     return data?.posts;
 }
+
+export async function getAllPosts(category) {
+    const data = await fetchAPI(
+
+        `
+        query NewQuery {
+            posts(where: {categoryName: "${category}"}) {
+                edges {
+                node {
+                    id
+                    slug
+                    title
+                    excerpt
+                    featuredImage {
+                        node {
+                            altText
+                            sourceUrl
+                        }
+                    }
+                }
+            }
+          }
+        }
+      `
+    );
+
+    return data?.posts;
+}

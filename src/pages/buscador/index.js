@@ -1,6 +1,8 @@
 // import Head from "next/head";
 // import s from '../../styles/css/BuscadorIngrediente.module.css'
 
+import H1 from "@/components/content/h1";
+
 // export default function BuscadorAlimentos() {
 
 //     return (
@@ -24,6 +26,6 @@
 
 export default function Buscador() {
     return (
-        <></>
+        <><H1>GHOLAAA</H1></>
     )
 }

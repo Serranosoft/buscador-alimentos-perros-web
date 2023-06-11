@@ -1,0 +1,154 @@
+@use "../components/content/button.module" as btn;
+@use "../components/content/anchor.module.scss" as anchor;
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem 8rem 1rem;
+    background-color: #ffffff;
+    color: #000000;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1150px;
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+
+        .titleWrapper {
+            flex: 1 1 500px;
+            display: flex;
+            flex-direction: column;
+            color: #000000;
+
+            * {
+                color: inherit;
+            }
+
+            span.title,
+            h1.title {
+                font-size: clamp(2.5rem, 3vw + 2rem, 4rem);
+                font-weight: bold;
+                margin: 0;
+                display: inline;
+                line-height: 1.2;
+            }
+
+            &>div {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 0.75rem;
+
+                a {
+                    font-size: inherit;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 2rem;
+                    height: auto;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 20rem;
+            height: auto;
+            border-radius: 1.75rem;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            align-self: flex-start;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 850px;
+        margin-top: 5rem;
+
+        &>div {
+            width: 100%;
+
+            p,
+            ul li,
+            ol li,
+            p a {
+                font-size: 1.4rem;
+                color: #303030;
+                margin: 2.75rem 0;
+
+                strong {
+                    color: #000000;
+                }
+            }
+
+            ul,
+            ol {
+                padding-left: 3rem;
+
+                li {
+                    margin: 2.5rem 0;
+                }
+            }
+
+            h2 {
+                font-size: clamp(1.76rem, 0.64vw + 1.6rem, 2.11rem);
+                margin: 0;
+                margin: 2.5rem 0;
+            }
+
+            h3 {
+                font-size: clamp(1.41rem, 0.32vw + 1.33rem, 1.58rem);
+                line-height: 1.05;
+                margin: 2.5rem 0;
+            }
+
+            p a {
+                @include anchor.root;
+                color: #000000;
+
+                &:hover {
+                    background-size: 100% 100%;
+                    color: #ffffff;
+                }
+            }
+        }
+
+
+    }
+}
+
+.root :global {
+    .wp-block-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0;
+
+        .wp-block-button {
+            @include btn.root;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .wp-block-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+
+        img {
+            border-radius: 0.35rem;
+        }
+    }
+}

@@ -12,7 +12,6 @@ import Muted from '@/components/content/muted';
 
 export default function Ingrediente({ data, ingredients }) {
 
-
     return (
         <>
             <Head>
@@ -63,7 +62,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const data = await getPostBySlug("buscador/alimento", context.params.url)
+    const data = await getPostBySlug("buscador/alimento", context.params.slug)
     const ingredientsNotFormatted = await getTitleItems();
     const ingredients = ingredientsNotFormatted.edges;
 

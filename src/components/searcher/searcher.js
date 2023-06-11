@@ -38,7 +38,7 @@ export default function Searcher({ ingredients }) {
             <div className={styles.suggestions}>
                 {matches.map(el => {
                     return (
-                        <Link key={el.id} href={`/buscador/alimento/${el.url}`}><span dangerouslySetInnerHTML={{ __html: el.html }}></span></Link>
+                        <Link key={el.id} href={`/buscador/alimento/${el.slug}`}><span dangerouslySetInnerHTML={{ __html: el.html }}></span></Link>
                     )
                 })}
             </div>

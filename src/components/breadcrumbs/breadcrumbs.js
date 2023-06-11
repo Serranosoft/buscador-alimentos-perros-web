@@ -10,9 +10,9 @@ export default function Breadcrumbs() {
         <div className={styles.root}>
             <span><Anchor href="/">Página principal</Anchor></span>
             <span>{"»"}</span>
-            <span><Anchor href={`/${router.pathname.split('/')[1]}/${router.pathname.split('/')[2]}`}>{router.pathname.split('/')[2]}</Anchor></span>
+            <span><Anchor href={`/${router.pathname.split('/')[1]}`}>{router.pathname.split('/')[1]}</Anchor></span>
             <span>{"»"}</span>
-            <span><Anchor href={`${router.query.url}`}>{router.query.url.split("-").join(" ")}</Anchor></span>
+            <span><Anchor href={`${router.query.slug}`}>{router.query.slug.split("-").join(" ")}</Anchor></span>
         </div>
     )
 }

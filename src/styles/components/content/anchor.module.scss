@@ -24,3 +24,29 @@
         transform-origin: bottom left;
     }
 }
+
+
+@mixin root {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.13rem, 0.11vw + 1.1rem, 1.19rem);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 5px;
+        bottom: -5px;
+        left: 0;
+        background-color: $primary;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}

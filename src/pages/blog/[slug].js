@@ -1,0 +1,49 @@
+import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
+import Container from "@/components/content/container";
+import H1 from "@/components/content/h1";
+import styles from "@/styles/blog/[slug].module.scss";
+import Link from "next/link";
+import { getAllSlugs, getPostBySlug } from "../api/wordpress";
+
+export default function slug({ data }) {
+
+    return (
+        <>
+            <Container fullscreen className={styles.root}>
+                <div className={styles.header}>
+                    <div className={styles.titleWrapper}>
+                        <Breadcrumbs />
+                        <H1 className={styles.title}>{data.title}</H1>
+                        <div>
+                            <img src="/favicon.svg" />
+                            <Link target="_blank" href="/">{data.author.node.name}</Link>
+                        </div>
+                    </div>
+                    <img src={data.featuredImage.node.sourceUrl} />
+                </div>
+                <div className={styles.content}>
+                    <div dangerouslySetInnerHTML={{ __html: data.content }} />
+                </div>
+            </Container>
+        </>
+    )
+}
+
+export const getStaticPaths = async () => {
+
+    const allPosts = await getAllSlugs();
+    return {
+        paths: allPosts.edges.map(({ node }) => `/blog/${node.slug}`),
+        fallback: false
+    }
+}
+
+export const getStaticProps = async (context) => {
+
+    const data = await getPostBySlug("blog", context.params.slug)
+    return {
+        props: {
+            data
+        },
+    };
+}

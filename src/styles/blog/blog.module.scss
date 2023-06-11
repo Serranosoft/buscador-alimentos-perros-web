@@ -1,0 +1,100 @@
+.root {
+    background-color: white;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 1rem;
+        max-width: 1380px;
+
+        p {
+            color: inherit;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: 700;
+            line-height: 1;
+            max-width: 900px;
+
+            &:last-of-type {
+                color: rgb(173, 173, 173);
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-top: 5rem;
+
+            .sidebar {
+                position: sticky;
+                top: 110px;
+                flex: 0 1 450px;
+                order: -1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                white-space: normal;
+
+                p:first-of-type {
+                    font-weight: bold;
+                }
+
+                .actions {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                }
+            }
+
+            .list {
+                flex: 1;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 3.5rem 2.5rem;
+
+                a {
+                    border-radius: 1.75rem;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                    line-height: 0;
+                    transition: box-shadow 0.25s;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: inherit;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        &>div {
+            .content {
+                flex-direction: column;
+
+                .sidebar {
+                    position: static;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
