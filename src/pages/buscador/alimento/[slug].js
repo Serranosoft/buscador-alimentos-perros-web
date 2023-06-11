@@ -53,7 +53,7 @@ export default function Ingrediente({ data, ingredients }) {
 
 export async function getStaticPaths() {
 
-    const allPosts = await getAllSlugs();
+    const allPosts = await getAllSlugs("/buscador/alimento");
 
     return {
         paths: allPosts.edges.map(({ node }) => `/buscador/alimento/${node.slug}`),

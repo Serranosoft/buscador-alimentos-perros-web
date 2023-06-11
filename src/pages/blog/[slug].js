@@ -31,7 +31,7 @@ export default function slug({ data }) {
 
 export const getStaticPaths = async () => {
 
-    const allPosts = await getAllSlugs();
+    const allPosts = await getAllSlugs("blog");
     return {
         paths: allPosts.edges.map(({ node }) => `/blog/${node.slug}`),
         fallback: false

@@ -50,10 +50,10 @@ export async function getPostBySlug(category, slug) {
     return data?.post
 }
 
-export async function getAllSlugs() {
+export async function getAllSlugs(category) {
     const data = await fetchAPI(`
     {
-      posts(first: 200) {
+      posts(where: {categoryName: "${category}"}, first: 200) {
         edges {
           node {
             slug
