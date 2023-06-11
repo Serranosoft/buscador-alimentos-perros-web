@@ -1,3 +1,5 @@
+@import "../colors.scss";
+
 .root {
     background-color: white;
     color: #000000;
@@ -21,10 +23,6 @@
             font-weight: 700;
             line-height: 1;
             max-width: 900px;
-
-            &:last-of-type {
-                color: rgb(173, 173, 173);
-            }
         }
 
         .content {
@@ -63,10 +61,13 @@
                 gap: 3.5rem 2.5rem;
 
                 a {
-                    border-radius: 1.75rem;
-                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-                    line-height: 0;
+                    display: flex;
+                    flex-direction: column;
+                    border-top-left-radius: 1.75rem;
+                    border-top-right-radius: 1.75rem;
                     transition: box-shadow 0.25s;
+                    border: 13px solid $primary;
+                    
 
                     &:hover {
                         box-shadow: none;
@@ -76,6 +77,12 @@
                         width: 100%;
                         height: auto;
                         border-radius: inherit;
+                        border-top-right-radius: 0;
+                    }
+
+                    p {
+                        text-align: center;
+                        padding: 0.5rem;
                     }
                 }
             }

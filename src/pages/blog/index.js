@@ -10,8 +10,7 @@ export default function Blog({ data, ingredients }) {
     return (
         <Container className={styles.root} fullscreen>
             <div>
-                <Text xxxl className={styles.title}>TRÁFICO CONSTANTE Y CUALIFICADO</Text>
-                <Text xxl className={styles.title}>DESCUBRE DE QUE TRATA EL SEO</Text>
+                <Text xxxl className={styles.title}>Todo sobre alimentación, curiosidades y consejos en el mundo animal</Text>
 
                 <div className={styles.content}>
                     <div className={styles.list}>
@@ -20,14 +19,15 @@ export default function Blog({ data, ingredients }) {
                                 return (
                                     <Link href={`/blog/${blog.node.slug}`}>
                                         <img alt={blog.node.featuredImage.node.altText} src={blog.node.featuredImage.node.sourceUrl} />
+                                        <Text>{blog.node.title}</Text>
                                     </Link>
                                 )
                             })
                         }
                     </div>
                     <div className={styles.sidebar}>
-                        <Text xl>¿Abrumado con demasiada información?</Text>
-                        <Text>Comienza a posicionar tu web y obtener tráfico real desde ya con nuestra ayuda.<br></br> Kaoos es una agencia especializada en diseño web y posicionamiento.</Text>
+                        <Text xl>Información sobre alimentos</Text>
+                        <Text>Escribe un alimento en nuestro buscador interactivo para conocer como afecta cada uno de los elementos que ingiere tu mascota en su sistema digestivo</Text>
                         <div className={styles.actions}>
                             <Searcher ingredients={ingredients} />
                         </div>
