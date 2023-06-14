@@ -26,7 +26,7 @@ export default function Searcher({ ingredients }) {
                 const regex = new RegExp(letters, 'gi');
                 const ingrMatched = ingredient.node.title.replace(regex, `<span style="background-color:#5DFDCB">${letters}</span>`)
                 i++;
-                matches.push({ id: ingredient.node.id, html: `${ingrMatched}`, url: ingredient.node.slug, name: ingredient.node.title })
+                matches.push({ id: ingredient.node.id, html: `${ingrMatched}`, slug: ingredient.node.slug, name: ingredient.node.title })
             }
         }).join('');
         setMatches(matches)

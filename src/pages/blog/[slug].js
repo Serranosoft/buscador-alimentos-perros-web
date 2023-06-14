@@ -8,8 +8,6 @@ import Head from "next/head";
 
 export default function slug({ data }) {
 
-    console.log(data);
-
     return (
         <>
             <Head>
