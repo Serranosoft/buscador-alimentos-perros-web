@@ -15,6 +15,7 @@ export default function slug({ data }) {
                 <meta name="description" content={`${data.title} — Buscadog`} />
                 <meta property="og:title" content={`${data.title} — Buscadog`} />
                 <meta property="og:url" content={`https://buscadog.net/blog/${data.slug}`} />
+                <link rel="icon" href="/favicon.svg" />
             </Head>
             <Container fullscreen className={styles.root}>
                 <div className={styles.header}>

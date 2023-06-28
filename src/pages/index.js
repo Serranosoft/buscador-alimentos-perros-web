@@ -19,6 +19,7 @@ export default function Home({ingredients}) {
                 <meta property="og:title" content="¿Qué puede comer un perro? Información sobre Perros | BuscaDog" />
                 <meta property="og:url" content="https://buscadog.net/" />
                 <meta name="twitter:description" content="¿Qué puede comer un perro? Información sobre Perros | BuscaDog"></meta>
+                <link rel="icon" href="/favicon.svg" />
             </Head>
 
             <Container className={styles.root}>

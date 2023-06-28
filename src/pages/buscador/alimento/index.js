@@ -18,6 +18,7 @@ export default function BuscadorAlimentos({ ingredients }) {
                 <meta property="og:title" content={`Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]`} />
                 <meta name="twitter:description" content="Encuentra respuestas sobre alimentos saludables o perjudiciales para tu mascota [Respuestas rápidas]"></meta>
                 <meta property="og:url" content={`https://buscadog.net/buscador/alimento`} />
+                <link rel="icon" href="/favicon.svg" />
             </Head>
             <Container small className={styles.root}>
                 <div className={styles.container}>
