@@ -1,57 +1,121 @@
-.header {
+@import "../colors";
+
+.root {
     position: sticky;
     top: 0;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 1.5rem;
-    background-color: #ffffff;
+    gap: 2rem;
+    padding: 1rem clamp(0.75rem, 1rem + 3vw, 4rem);
+    z-index: 10;
+    background-color: #fff;
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(1px);
-    z-index: 9999;
+    box-shadow: 1px 0 3px lightgray;
+    transition: all 0.75s;
+    z-index: 1000;
 
-    .menuContainer {
+    .logo {
         display: flex;
-        gap: 1rem;
-    }
+        align-items: center;
+        gap: 1.5rem;
 
-    .separator {
-        width: 1px;
-        height: 30px;
-        margin: auto 0;
-        background-color: black;
-    }
-
-    .menuLogo {
-        display: flex;
-        gap: 1rem;
-        & > a:first-child div {
-            display: flex;
-            align-items: center;
+        .burger {
+            display: none;
             cursor: pointer;
         }
+
         a {
-            align-self: center;
+            line-height: 0;
+
+            svg {
+                width: 12rem;
+                height: auto;
+            }
         }
     }
 
-    .muted {
-        font-size: 0.7rem;
-        color: gray;
-        border-radius: 100%;
+
+    .menu {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        position: relative;
+
+        svg.close {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+        }
+
+        svg:not(.close) {
+            display: none;
+            max-width: 10rem;
+            margin: 1rem 0;
+        }
+
+        a {
+            font-size: clamp(1.20rem, 0.15vw + 1.1rem, 1.27rem);
+            font-weight: bold;
+            color: #747474;
+            transition: color 0.35s;
+
+            &:hover {
+                color: #000000;
+                text-decoration: underline;
+                text-underline-offset: 8px;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    button {
+        font-size: inherit;
     }
 }
 
-@media (max-width: 992px) {
-    .header {
-        .menuLogo {
-            // order: -1;
-            .separator, & > a:nth-child(3) {
+@media (max-width: 768px) {
+    .root {
+        .logo {
+            .burger {
+                display: block;
+            }
+
+            svg {
                 display: none;
             }
         }
-        .menuContainer {
+
+        .menu {
             display: none;
+
+            &.active {
+                display: flex;
+            }
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            padding: 5rem 0.5rem;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #ffffff;
+            z-index: 1000;
+            text-align: center;
+
+            svg.close,
+            button,
+            svg:not(.close) {
+                display: block;
+            }
         }
     }
 }
