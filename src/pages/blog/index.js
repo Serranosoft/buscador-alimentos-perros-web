@@ -4,6 +4,7 @@ import styles from "@/styles/blog/blog.module.scss";
 import Text from "@/components/content/text";
 import Link from "next/link";
 import Searcher from "@/components/searcher/searcher";
+import Head from "next/head";
 
 export default function Blog({ data, ingredients }) {
 
