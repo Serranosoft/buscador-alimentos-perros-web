@@ -31,9 +31,9 @@ export default function Header() {
                         clipRule="evenodd"
                     />
                 </svg>
-                <a href="/">
+                <Link href="/">
                     <Logo />
-                </a>
+                </Link>
             </div>
             <div id="menu" className={styles.menu}>
                 <svg
