@@ -52,12 +52,9 @@ export default function Header() {
                 </svg>
 
                 <Logo />
-                <Link href="/buscador/alimentos">Buscador de alimentos</Link>
+                <Link href="/buscador/alimento">Buscador de alimentos</Link>
                 <Link href="/blog">Blog</Link>
             </div>
-
-            {/* <Button href="/">Presupuesto</Button> */}
-
         </header>
     )
 }
