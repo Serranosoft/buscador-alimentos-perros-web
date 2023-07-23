@@ -32,9 +32,9 @@ export default function Header() {
                             clipRule="evenodd"
                         />
                     </svg>
-                    <a href="/">
+                    <Link href="/">
                         <Logo />
-                    </a>
+                    </Link>
                 </div>
                 <Link href="/buscador/alimento">
                     <Button>Ver buscador de alimentos</Button>
@@ -60,9 +60,9 @@ export default function Header() {
                         d="M12.018 10 21 18.554 19.48 20l-8.98-8.554L1.518 20 0 18.554 8.98 10 0 1.446 1.518 0 10.5 8.554 19.48 0 21 1.446z"
                     />
                 </svg>
-                <a className={styles.mobileLogo} href="/">
+                <Link className={styles.mobileLogo} href="/">
                     <Logo />
-                </a>
+                </Link>
                 <Link href="/carne">Carnes</Link>
                 <Link href="/verdura">Verduras</Link>
                 <Link href="/fruta">Frutas</Link>
