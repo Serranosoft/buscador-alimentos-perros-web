@@ -38,14 +38,3 @@ export default function Home({ ingredients }) {
         </>
     )
 }
-
-export async function getServerSideProps() {
-
-    const data = await getTitleItems();
-    const ingredients = data.edges;
-    return {
-        props: {
-            ingredients
-        }
-    }
-}
