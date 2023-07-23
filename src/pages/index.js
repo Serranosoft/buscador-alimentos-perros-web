@@ -7,8 +7,12 @@ import { getTitleItems } from './api/wordpress';
 import Info1 from './home/info1';
 import Banner from './home/banner';
 import Aos from '@/components/aos/aos';
+import BlogContent from './home/health-content';
+import HealthContent from './home/health-content';
+import FeedContent from './home/feed-content';
+import ProteinContent from './home/protein-content';
 
-export default function Home({ingredients}) {
+export default function Home({ ingredients }) {
 
     return (
         <>
@@ -22,14 +26,15 @@ export default function Home({ingredients}) {
                 <link rel="icon" href="/favicon.svg" />
             </Head>
 
-            <Container className={styles.root}>
-                <div>
-                    <Hero ingredients={ingredients} />
-                    <Banner />
-                    <Popular />
-                    <Info1 />
-                </div>
-            </Container>
+            <div className={styles.root}>
+                <Hero ingredients={ingredients} />
+                <HealthContent />
+                <ProteinContent />
+                <FeedContent />
+                {/* <Banner /> */}
+                {/* <Popular /> */}
+                <Info1 />
+            </div>
         </>
     )
 }

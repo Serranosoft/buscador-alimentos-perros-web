@@ -1,9 +1,9 @@
 .root {
     max-width: 1280px;
-    margin: 0 auto;
+    // margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    // padding: 0 1rem;
 }
 
 .large {
@@ -16,4 +16,5 @@
 
 .fullscreen {
     max-width: unset;
+    padding: 0;
 }

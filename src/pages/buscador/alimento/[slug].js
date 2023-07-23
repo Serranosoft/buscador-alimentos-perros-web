@@ -26,13 +26,13 @@ export default function Ingrediente({ data, ingredients }) {
                     <div className={styles.content}>
                         <div className={styles.header}>
                             <Breadcrumbs />
-                            <H1>¿Los perros pueden comer <span>{data.title.toLowerCase()}</span>?</H1>
+                            <H1>¿Los perros pueden comer {data.title.toLowerCase()}?</H1>
                             <div>
                                 <img src="/favicon.svg" />
                                 <Muted>{data.author.node.name}</Muted>
                             </div>
                         </div>
-                        <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
+                        <div className={styles.answer} dangerouslySetInnerHTML={{ __html: data.content }}></div>
                         <div className={styles.notification}>
                             <Text>¡Te recomendamos visitar a un veterinario antes de tomar una decisión para obtener una recomendación respaldada por un profesional!</Text>
                         </div>

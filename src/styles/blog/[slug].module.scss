@@ -7,8 +7,6 @@
     flex-direction: column;
     align-items: center;
     padding: 5rem 1rem 8rem 1rem;
-    background-color: #ffffff;
-    color: #000000;
 
     .header {
         display: flex;
@@ -24,17 +22,12 @@
             flex-direction: column;
             color: #000000;
 
-            * {
-                color: inherit;
-            }
-
             span.title,
             h1.title {
-                font-size: clamp(2.5rem, 3vw + 2rem, 4rem);
-                font-weight: bold;
+                font-size: clamp(2.5rem, 1.15vw + 1.98rem, 3.5rem);
                 margin: 0;
-                display: inline;
-                line-height: 1.2;
+                font-weight: bold;
+                line-height: unset;
             }
 
             &>div {
@@ -42,10 +35,6 @@
                 align-items: center;
                 gap: 0.5rem;
                 margin-top: 0.75rem;
-
-                a {
-                    font-size: inherit;
-                }
 
                 img {
                     width: 100%;
@@ -80,9 +69,8 @@
             ul li,
             ol li,
             p a {
-                font-size: 1.4rem;
-                color: #303030;
-                margin: 2.75rem 0;
+                color: #292929;
+                margin: 2.25rem 0;
 
                 strong {
                     color: #000000;
@@ -94,7 +82,7 @@
                 padding-left: 3rem;
 
                 li {
-                    margin: 2.5rem 0;
+                    margin: 2.25rem 0;
                 }
             }
 
@@ -107,17 +95,19 @@
             h3 {
                 font-size: clamp(1.41rem, 0.32vw + 1.33rem, 1.58rem);
                 line-height: 1.05;
-                margin: 2.5rem 0;
+                margin: 2rem 0;
             }
 
             p a {
+                color: rgb(0, 165, 82);
+                font-weight: bold;
                 @include anchor.root;
-                color: #000000;
+                // color: #000000;
 
-                &:hover {
-                    background-size: 100% 100%;
-                    color: #ffffff;
-                }
+                // &:hover {
+                    // background-size: 100% 100%;
+                    // color: #ffffff;
+                // }
             }
         }
 
@@ -134,10 +124,6 @@
 
         .wp-block-button {
             @include btn.root;
-
-            a {
-                color: #ffffff;
-            }
         }
     }
 
@@ -145,7 +131,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 5rem 0;
+        margin: 2.5rem 0;
 
         img {
             border-radius: 0.35rem;

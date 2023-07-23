@@ -1,0 +1,57 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    .hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-image: url("https://api.buscadog.net/wp-content/uploads/2023/07/meat.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 6rem clamp(1rem, 1vw + 1rem, 2rem);
+        margin-bottom: 5rem;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(4, 126, 102, 0.67);
+        }
+        p {
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            color: #ffffff;
+            max-width: 750px;
+            text-align: center;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 4rem 2.5rem;
+        width: 100%;
+        max-width: 900px;
+        padding: 0 2rem;
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 0.35rem;
+            }
+        }
+    }
+}

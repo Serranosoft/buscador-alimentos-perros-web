@@ -5,10 +5,7 @@
     gap: 0.35rem;
     a {
         display: flex;
-        font-size: clamp(1.13rem, 0.11vw + 1.1rem, 1.19rem);
         margin: 0;
-        &::first-letter {
-            text-transform: capitalize;
-        }
+        text-transform: capitalize;
     }
 }

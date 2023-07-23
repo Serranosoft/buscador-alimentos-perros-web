@@ -109,3 +109,29 @@ export async function getAllPosts(category) {
 
     return data?.posts;
 }
+
+export async function getArchiveFromTag(tag) {
+    const data = await fetchAPI(
+        `
+        query getArchiveFromTag {
+            posts(where: {tag: "${tag}"}) {
+              edges {
+                node {
+                  id
+                  slug
+                  title
+                  featuredImage {
+                    node {
+                      altText
+                      sourceUrl
+                    }
+                  }
+                }
+              }
+            }
+        }
+          `
+    )
+
+    return data?.posts.edges;
+}

@@ -5,6 +5,7 @@ import styles from "@/styles/blog/[slug].module.scss";
 import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "../api/wordpress";
 import Head from "next/head";
+import Anchor from "@/components/content/anchor";
 
 export default function slug({ data }) {
 
@@ -24,7 +25,7 @@ export default function slug({ data }) {
                         <H1 className={styles.title}>{data.title}</H1>
                         <div>
                             <img src="/favicon.svg" />
-                            <Link target="_blank" href="/">{data.author.node.name}</Link>
+                            <Anchor target="_blank" href="/">{data.author.node.name}</Anchor>
                         </div>
                     </div>
                     <img src={data.featuredImage.node.sourceUrl} />
