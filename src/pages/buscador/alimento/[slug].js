@@ -41,7 +41,7 @@ export default function Ingrediente({ data, ingredients }) {
                         <Suggestion />
                         <div>
                             <Text>¡Busca un alimento!</Text>
-                            <Searcher ingredients={ingredients} />
+                            <Searcher ingredients={ingredients} reload />
                         </div>
                     </div>
                 </div>
