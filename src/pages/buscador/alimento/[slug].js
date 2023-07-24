@@ -15,7 +15,7 @@ export default function Ingrediente({ data, ingredients }) {
     return (
         <>
             <Head>
-                <title>¿Un perro puede comer {data.title}? Respuestas rápidas en BuscaDog</title>
+                <title>¿Un perro puede comer {data.title}? Información sobre perros</title>
                 <meta name="description" content={`¿Un perro puede comer ${data.title}? Respuestas rápidas en Buscadog`} />
                 <meta property="og:title" content={`¿Un perro puede comer ${data.title}? Respuestas rápidas en Buscadog`} />
                 <meta property="og:url" content={`https://buscadog.net/buscador/alimento/${data.slug}`} />

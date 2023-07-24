@@ -2,34 +2,17 @@
 import styles from '@/styles/buscador-alimento/suggestions.module.scss'
 import Anchor from './content/anchor';
 import Text from './content/text';
+import CustomLink from './content/customLink';
+import Link from 'next/link';
 
 export default function Suggestion() {
     return (
         <div className={styles.suggestions}>
-            <Text>¿Tienes más dudas?</Text>
             <div>
-                <ul>
-                    <li>
-                        <Anchor href={"/buscador/alimento/manzana"} target="_blank">
-                            <span>¿Los perros pueden comer manzana?</span>
-                        </Anchor>
-                    </li>
-                    <li>
-                        <Anchor href={"/buscador/alimento/platano"} target="_blank">
-                            <span>¿Los perros pueden comer plátano?</span>
-                        </Anchor>
-                    </li>
-                    <li>
-                        <Anchor href={"/buscador/alimento/brocoli"} target="_blank">
-                            <span>¿los perros pueden comer brocoli?</span>
-                        </Anchor>
-                    </li>
-                    <li>
-                        <Anchor href={"/buscador/alimento/zanahoria"} target="_blank">
-                            <span>¿Los perros pueden comer zanahoria?</span>
-                        </Anchor>
-                    </li>
-                </ul>
+                <Link href="/blog/seresto-collar-perros">
+                    <img alt={"Seresto collar antiparasitario para perros"} src={"https://api.buscadog.net/wp-content/uploads/2023/07/seresto-perros-collar.jpg"} />
+                    <Text>Seresto collar antiparasitario para perros: Todo lo que debes saber</Text>
+                </Link>
             </div>
         </div>
     )
