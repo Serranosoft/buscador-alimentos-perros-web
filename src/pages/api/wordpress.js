@@ -53,7 +53,7 @@ export async function getPostBySlug(category, slug) {
 export async function getAllSlugs(category) {
     const data = await fetchAPI(`
     {
-      posts(where: {categoryName: "${category}"}, first: 200) {
+      posts(where: {categoryName: "${category}"}, first: 300) {
         edges {
           node {
             slug
@@ -68,7 +68,7 @@ export async function getAllSlugs(category) {
 export async function getTitleItems() {
     const data = await fetchAPI(`
         query NewQuery {
-            posts(where: {categoryName: "/buscador/alimento"}, first: 200) {
+            posts(where: {categoryName: "/buscador/alimento"}, first: 300) {
               edges {
                 node {
                   id
@@ -87,7 +87,7 @@ export async function getAllPosts(category) {
 
         `
         query NewQuery {
-            posts(where: {categoryName: "${category}"}) {
+            posts(where: {categoryName: "${category}"}, first: 300) {
                 edges {
                 node {
                     id
@@ -114,7 +114,7 @@ export async function getArchiveFromTag(tag) {
     const data = await fetchAPI(
         `
         query getArchiveFromTag {
-            posts(where: {tag: "${tag}"}) {
+            posts(where: {tag: "${tag}"}, first: 200) {
               edges {
                 node {
                   id
