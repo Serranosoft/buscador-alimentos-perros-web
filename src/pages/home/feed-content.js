@@ -27,12 +27,12 @@ export default function FeedContent() {
                     </CustomLink>
                 </div>
                 <div className={styles.item}>
-                    <CustomLink href="/blog/pienso-hipoalergenico-perros/">
-                        <img src="https://api.buscadog.net/wp-content/uploads/2023/06/cual-mejor-pienso-hipoalergenico.jpg" />
+                    <CustomLink href="/blog/15-alimentos-prohibidos-para-perros/">
+                        <img src="https://api.buscadog.net/wp-content/uploads/2023/08/alimentos-prohibidos-para-perros.jpg" />
                     </CustomLink>
                     <Text className={styles.category}>Alimentación</Text>
-                    <CustomLink href="/blog/pienso-hipoalergenico-perros/">
-                        <Text xl>Pienso hipoalergénico para perros: Para qué sirven y beneficios</Text>
+                    <CustomLink href="/blog/15-alimentos-prohibidos-para-perros/">
+                        <Text xl>15 Alimentos que NUNCA deben comer los perros ⛔</Text>
                     </CustomLink>
                 </div>
                 <div className={styles.item}>
