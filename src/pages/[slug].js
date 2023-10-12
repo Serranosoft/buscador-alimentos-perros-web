@@ -32,7 +32,7 @@ export default function Test({data}) {
 }
 
 export const getStaticPaths = async () => {
-    const arr = ["carne", "cereal", "grasa", "bebida", "verdura", "fruta", "legumbre", "dulce"];
+    const arr = ["carne", "cereal", "grasa", "bebida", "verdura", "fruta", "legumbre", "fruto-seco", "dulce"];
 
     const paths = arr.map((el) => ({
         params: {slug: el} 
