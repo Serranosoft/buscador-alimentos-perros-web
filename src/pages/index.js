@@ -5,9 +5,7 @@ import Hero from './home/hero';
 import Popular from './home/popular';
 import { getTitleItems } from './api/wordpress';
 import Info1 from './home/info1';
-import Banner from './home/banner';
 import Aos from '@/components/aos/aos';
-import BlogContent from './home/health-content';
 import HealthContent from './home/health-content';
 import FeedContent from './home/feed-content';
 import ProteinContent from './home/protein-content';
@@ -23,7 +21,6 @@ export default function Home({ ingredients }) {
                 <meta property="og:title" content="¿Qué puede comer un perro? Información sobre Perros | BuscaDog" />
                 <meta property="og:url" content="https://buscadog.net/" />
                 <meta name="twitter:description" content="¿Qué puede comer un perro? Información sobre Perros | BuscaDog"></meta>
-                <link rel="icon" href="/favicon.svg" />
             </Head>
 
             <div className={styles.root}>
@@ -31,8 +28,6 @@ export default function Home({ ingredients }) {
                 <HealthContent />
                 <ProteinContent />
                 <FeedContent />
-                {/* <Banner /> */}
-                {/* <Popular /> */}
                 <Info1 />
             </div>
         </>

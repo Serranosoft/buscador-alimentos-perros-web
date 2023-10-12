@@ -15,7 +15,6 @@ export default function Blog({ data, ingredients }) {
                 <meta name="description" content={`Recomendaciones para el cuidado de tus mascotas — Buscadog`} />
                 <meta property="og:title" content={`Recomendaciones para el cuidado de tus mascotas — Buscadog`} />
                 <meta property="og:url" content={`https://buscadog.net/blog/`} />
-                <link rel="icon" href="/favicon.svg" />
             </Head>
             <Container className={styles.root} fullscreen>
                 <div>
