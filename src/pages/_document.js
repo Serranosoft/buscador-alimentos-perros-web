@@ -14,11 +14,11 @@ class MyDocument extends Document {
                     <link rel="icon" href="https://buscadog.net/favicon.svg" sizes="192x192" />
                     <meta name="google-site-verification" content="mDr4jX4s19KzRXyYUwYi_BB1gm2cb5AziPGwHqW8yI0" />
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3963345159052388" crossOrigin="anonymous"></script>
-                    <meta property="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg" />
-                    <meta name="og:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                    <meta property="og:image" content="https://api.buscadog.net/wp-content/uploads/2023/10/buscadog-opengraph.jpg" />
+                    <meta name="og:image" content="https://api.buscadog.net/wp-content/uploads/2023/10/buscadog-opengraph.jpg"></meta>
                     <meta property="og:type" content="website"></meta>
                     <meta name="twitter:card" content="summary_large_image"></meta>
-                    <meta name="twitter:image" content="https://buscadog.manu-scholz.com/wp-content/uploads/2022/05/test2.jpg"></meta>
+                    <meta name="twitter:image" content="https://api.buscadog.net/wp-content/uploads/2023/10/buscadog-opengraph.jpg"></meta>
                     {<script dangerouslySetInnerHTML={{
                         __html: `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
