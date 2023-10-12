@@ -44,7 +44,7 @@
             }
         }
 
-        img {
+        & > img {
             width: 100%;
             max-width: 20rem;
             height: auto;
@@ -102,12 +102,13 @@
                 color: rgb(0, 165, 82);
                 font-weight: bold;
                 @include anchor.root;
-                // color: #000000;
+            }
 
-                // &:hover {
-                    // background-size: 100% 100%;
-                    // color: #ffffff;
-                // }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 40rem;
+                margin: 1rem auto;
             }
         }
 
