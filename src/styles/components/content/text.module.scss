@@ -14,12 +14,6 @@
 .xxl {
     font-size: clamp(1.76rem, 0.64vw + 1.6rem, 2.11rem);
     line-height: 1.05;
-    & > span {
-        text-decoration: underline;
-        text-decoration-color: $secondary;
-        text-decoration-thickness: 5px;
-        text-underline-offset: 0.25rem;
-    }
 }
 
 .xxxl {
