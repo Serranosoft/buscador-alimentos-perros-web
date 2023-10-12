@@ -68,7 +68,7 @@ export default function Header() {
                 <Link href="/fruta">Frutas</Link>
                 <Link href="/bebida">Bebidas</Link>
                 <Link href="/cereal">Cereales</Link>
-                <Link href="/legumbre">Legumbres</Link>
+                <Link href="/pescado">Pescados</Link>
                 <Link href="/fruto-seco">Frutos Secos</Link>
                 <Link href="/blog">Blog</Link>
             </div>
