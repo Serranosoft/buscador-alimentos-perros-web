@@ -60,13 +60,11 @@ export default function BuscadorAlimentos({ ingredients }) {
     )
 }
 
-export async function getServerSideProps() {
-
+export const getStaticProps = async () => {
     const data = await getTitleItems();
     const ingredients = data.edges;
+
     return {
-        props: {
-            ingredients
-        }
-    }
+        props: { ingredients },
+    };
 }
