@@ -24,6 +24,7 @@ export default function Test({ data }) {
                 </div>
 
                 <div className={styles.grid}>
+                    <Text xl>Hemos hecho una lista de {router.query.slug} para que aprendas si un perro puede comerlo o no</Text>
                     {
                         data.map(post => {
                             return (
