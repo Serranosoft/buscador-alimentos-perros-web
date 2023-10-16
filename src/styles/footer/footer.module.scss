@@ -4,8 +4,79 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: $primary;
-    padding: 1.2rem 1.5rem;
+    background-color: #131413;
+    padding: 3rem 1.5rem;
+    p, a {
+        color: #fff;
+    }
+    .columns {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5rem;
+        max-width: 100rem;
+        .info {
+            flex: 1 1 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem 0.5rem;
+            align-self: center;
+            p:first-child {
+                margin-bottom: 1rem;
+                font-weight: bold;
+            }
+            & > a {
+                display: flex;
+                width: 100%;
+                margin-top: 1.5rem;
+                margin-bottom: 0.75rem;
+                svg {
+                    width: 100%;
+                    height: auto;
+                    max-width: 15rem;
+                    margin-left: -0.75rem;
+                    & > path {
+                        fill: #fff;
+                    }
+                }
+            }
+            .policies {
+                display: flex;
+                align-items: center;
+                gap: 1.25rem;
+                a {
+                    transition: padding 0.15s;
+                    padding-bottom: 0.35rem;
+                    border-bottom: 3px solid $primary;
+                    &:hover {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .menu {
+            flex: 1 1 700px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem 0.5rem;
+            justify-items: flex-start;
+            p {
+                grid-column: 1 / -1;
+                margin-bottom: 1rem;
+                font-weight: bold;
+            }
+            a {
+                text-align: start;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+       
+    }
 }
+
