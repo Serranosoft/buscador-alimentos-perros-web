@@ -11,8 +11,8 @@ export default function Hero() {
 
         <Container fullscreen className={styles.root}>
             <div className={styles.content}>
-                <H1>¿Es saludable lo que come mi mascota?</H1>
-                <Text xl>Tu principal recurso para obtener información detallada sobre la alimentación en perros y mucho más </Text>
+                <H1><Text xxxl>Cuida de tu mascota</Text></H1>
+                <Text xxl>Tu principal recurso para obtener información sobre alimentación en perros y mucho más </Text>
                 <div>
                     <Link href="/buscador/alimento/">
                         <Button dark>Ver listado de alimentos</Button>
@@ -21,6 +21,22 @@ export default function Hero() {
                         <Button dark>Ver mas información</Button>
                     </Link>
                 </div>
+                <svg
+                    preserveAspectRatio="none"
+                    style={{
+                        height: "100%",
+                        width: "100%",
+                    }}
+                    viewBox="0 0 500 150"
+                >
+                    <path
+                        d="M-68.56,225.50 C192.15,170.23 560.66,395.23 277.93,-226.45 L698.36,172.22 L0.00,150.00 Z"
+                        style={{
+                            stroke: "none",
+                            fill: "#e3e3e3",
+                        }}
+                    />
+                </svg>
             </div>
             <div className={styles.img}>
                 <img src="https://api.buscadog.net/wp-content/uploads/2023/07/hero-no-bg.png" />

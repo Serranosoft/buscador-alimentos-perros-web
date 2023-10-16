@@ -4,6 +4,7 @@ import CustomLink from "@/components/content/customLink";
 import H2 from "@/components/content/h2";
 import Text from "@/components/content/text";
 import styles from "@/styles/home/row-content.module.scss";
+import Link from "next/link";
 
 export default function HealthContent() {
 
@@ -12,7 +13,10 @@ export default function HealthContent() {
         <Container large className={`${styles.root} ${styles.right}`}>
             <div className={styles.title}>
                 <H2>Salud para tu mascota</H2>
-                <Text>Looking to get your seeds started indoors or direct sown the right way? Find out all you need to know about starting seeds in these comprehensive guides!</Text>
+                <Text>¿Quieres saber cómo puedes contribuir a que tu perro tenga una vida saludable? Encuentra todo lo que necesitas saber sobre la salud de tus mascotas con nuestras guías</Text>
+                <Link href="/blog/">
+                    <Button>Ver más</Button>
+                </Link>
             </div>
             <div className={styles.content}>
                 <div className={styles.item}>
@@ -40,13 +44,6 @@ export default function HealthContent() {
                     <Text className={styles.category}>Anti inflamatorios</Text>
                     <CustomLink href="/blog/antiinflamatorios-para-perros/">
                         <Text xl>¿Qué antiinflamatorios sirven para perros?</Text>
-                    </CustomLink>
-                </div>
-                <div>
-                    <CustomLink href="/blog/">
-                        <div className={styles.viewMore}>
-                            <Text>Ver Más</Text>
-                        </div>
                     </CustomLink>
                 </div>
             </div>

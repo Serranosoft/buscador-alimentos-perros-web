@@ -7,15 +7,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: clamp(6rem, 12vw, 12rem) clamp(1rem, 12vw, 12rem);
+    padding: clamp(7rem, 13vw, 13rem) clamp(1rem, 12vw, 12rem);
     background-color: $dark;
 
     .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
-        flex: 0 1 750px;
+        gap: 2rem 0;
+        flex: 0 1 900px;
         z-index: 1;
         :not(button) {
             color: #ffffff;
@@ -26,6 +26,13 @@
             align-items: center;
             gap: 1.5rem;
         }
+
+        svg {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     }
 
     .img {
@@ -34,6 +41,7 @@
         right: 0;
         display: flex;
         width: 45vw;
+        z-index: 1;
 
         img {
             width: 100%;
